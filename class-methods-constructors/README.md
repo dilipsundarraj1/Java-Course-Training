@@ -58,3 +58,13 @@ public class Sample{
 
 }
 ```
+
+### How to print the data in console ?
+
+-   The below call will print the data in to the console.
+
+```aidl
+  System.out.println("Hello World");
+```
+
+-   The **dot** operator is th way you call the methods and members of a call.
