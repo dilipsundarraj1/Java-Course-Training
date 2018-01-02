@@ -4,7 +4,7 @@
     -   primitive
     -   non-primitive
 
-![](https://github.com/dsaish3/Java-Course-Training/blob/master/data-types/images/data-type-1.jpeg)
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/data-types/images/data-type-1.JPG)
     
 ### Primitive Data Type:
 -   From the name it suggests these are the simplest data types:
