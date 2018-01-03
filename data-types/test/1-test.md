@@ -1,0 +1,11 @@
+- Create a project named **data-types**.
+- Create a package named **primitivedatatypes**
+  - Create a class named **PrimitiveDataType**
+    - Declare,initialize and print the value of the variable in the console.
+      -   boolean
+      -   char
+      -   int
+      -   long
+      -   float
+      -   double
+    - Reassign all the variables declared above with a new value and print the same.
