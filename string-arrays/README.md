@@ -3,6 +3,7 @@
 ### String :
 
 -   In java, string is basically an object that represents sequence of char values.
+-   String is always represented by enclosing it inside the double quotes.
 
 ```aidl
 public class StringType {
@@ -12,6 +13,9 @@ public class StringType {
         String s="Hello World";
 
         System.out.println(s);
+        
+        String str = new String("Hello");
+        System.out.println(str);
     }
 }
 ```
