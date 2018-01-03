@@ -16,6 +16,10 @@ public class PrimitiveDataTypes {
         int i=0;
         System.out.println(i);
 
+        int j = 11;
+
+        i=j;
+
         i =10;
         System.out.println(i);
 

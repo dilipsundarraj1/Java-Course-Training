@@ -86,6 +86,7 @@ public class PrimitiveDataTypes {
 
 -   Declare a variable name and re use it by assigning the value.
 
+**Approach 1**
 ```aidl
         int i=0;
         System.out.println(i);
@@ -94,6 +95,16 @@ public class PrimitiveDataTypes {
         System.out.println(i);
 ```
 
+**Approach 2**
+
+```aidl
+        int i=0;
+        System.out.println(i);
+
+        int j = 11;
+
+        i=j;
+```
 
 ### Identifiers:
 
@@ -113,7 +124,7 @@ OReilly_&_Associates // ampersand is not an alphanumeric character
 
 ### Non Primitive Data Type:
 
--   String , Arrays and etc.
+-   String,Arrays and etc.
 -   Classes are also referred to as non primitive data type.
 
 
