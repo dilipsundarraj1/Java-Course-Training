@@ -5,6 +5,15 @@ package com.learnJava;
  */
 public class Person {
 
+    public Person(){
+
+    }
+
+    public Person(String gender, String name) {
+        this.gender = gender;
+        this.name = name;
+    }
+
     String gender;
     String name;
 
@@ -24,6 +33,10 @@ public class Person {
         Person hema = new Person();
         hema.gender="Female";
         hema.name="Hema";
+
+        Person scooby = new Person("male", "Scooby");
+
+
 
     }
 }

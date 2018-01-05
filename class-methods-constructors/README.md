@@ -202,6 +202,8 @@ public class Human {
  
  **Example**
  
+ **Method without Parameters:**
+ 
  ```aidl
  public void breath(){
         System.out.println("Human is breathing with his nose");
@@ -212,6 +214,22 @@ public class Human {
         System.out.println("Human is breathing with his eyes");
     }
 ```
+
+**Method with Parameters:**
+
+-   If the method is going have multiple parameters then it should be comma seperated.
+
+```aidl
+public void punch(int minutes){
+        System.out.println("Punch for "+ minutes + " minutes.");
+    }
+
+public void walk(int minutes, int distance){
+        System.out.println("Walk "+ distance + " miles " +"for "+ minutes + " minutes.");
+    }
+
+```
+
  
 ##### Method Invocation:
 
@@ -221,10 +239,55 @@ public class Human {
  ```aidl
 public static void main(String[] args) {
 
-        Human dilip = new Human();//Reference variable
+        Human dilip = new Human();// dilip -> Reference variable
         dilip.breath(); // method invocation
         dilip.see();// method invocation
+        dilip.punch(5); // method invocation with one paramter
+        dilip.walk(5, 3);// method invocation with multiple paramters
+
 
 }
 ```
+
+### Constructor:
+
+-   A constructor in Java which will be invoked during the instanct/object creation.
+
+-   A constructor will have the name similar to the class name.
+
+-   Constructor is mainly used when there is a need to create an object with default values.
+
+**Example:**
+
+**Default Constructor:**
+
+```aidl
+public class Person {
+
+    public Person(){ // Default constructor
+        
+    }
+}
+```
+
+**Constructor With Parameters:**
+
+```aidl
+public class Person {
+
+    public Person(){
+
+    }
+
+    public Person(String gender, String name) {
+        this.gender = gender;
+        this.name = name;
+    }
+        public static void main(String[] args) {
+            Person scooby = new Person("male", "Scooby");
+        }
+    }
+```
+
+ 
  
