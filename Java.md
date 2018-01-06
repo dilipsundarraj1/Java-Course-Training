@@ -2,8 +2,6 @@
 
 ### JDK (Java Development Kit)
 
-![](https://github.com/dsaish3/Java-Course-Training/blob/master/project-setup/images/java-0.png)
-
 JDK (Java Development Kit)  
   - This is mandatory/needed for java development purposes.
   - Compiler
@@ -17,6 +15,7 @@ JRE( Java Runtime environment)
     - JVM (Java Virtual Machine)
       - This component is responsible for executing the code.
 
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/project-setup/images/java-0.png)
 
 ### Java Flow
 ![](https://github.com/dsaish3/Java-Course-Training/blob/master/project-setup/images/java-1.png)
