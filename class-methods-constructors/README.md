@@ -107,42 +107,97 @@ public class Student {
 
 
 **Analogy 1:**
--   A class is like a blue print of a house.
--   Objects are the actual houses that are built using the blue print.
-
-**Analogy 2:**
--   A class is equivalent to Person.
--   Objects are that a person can be male/female, different name, different height etc. .
-
-
-
+-   A class is equivalent to Student.
+-   Objects are those that are created out of the Student class.
+ 
+ ![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java1.png)
 
 ```aidl
-public class Person {
+public class Student {
 
-    String gender;
+    int age;
     String name;
-
+    String school;
 
     public static void main(String[] args) {
 
-        Person dilip = new Person(); //objec 1
-        dilip.gender="Male";
-        dilip.name="dilip";
+        Student student1 = new Student();
+        student1.age=12;
+        student1.name="abc";
+        student1.school="XYZ";
 
-        Person anshu = new Person(); //objec 2
+        Student student2 = new Student();
+        student2.age=12;
+        student2.name="def";
+        student2.school="ABC";
 
-        anshu.gender="Female";
-        anshu.name="Anshu";
-
-
-        Person hema = new Person(); //objec 3
-        hema.gender="Female";
-        hema.name="Hema";
 
     }
 }
+```
 
+**Analogy 2:**
+-   A class is equivalent to Car.
+-   Objects are that different types of cars that you can build out of the Car class.
+
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java2.png)
+
+```aidl
+public class Car {
+
+    private String model;
+    private int year;
+
+    public static void main(String[] args) {
+
+        Car camry = new Car();
+        camry.model = "Camry";
+        camry.year=2007;
+
+
+        Car accord = new Car();
+        accord.model = "Accord";
+        accord.year=2007;
+
+        Car civic = new Car();
+        civic.model = "Civic";
+        civic.year=2007;
+
+
+
+    }
+}
+```
+
+
+**Analogy 3:**
+-   A class is like a blue print of a house.
+-   Objects are the actual houses that are built using the blue print.
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java3.png)
+
+```aidl
+public class House {
+
+    private int houseNumber;
+    private String houseAddress;
+
+    public static void main(String[] args) {
+
+        House house1 = new House();
+        house1.houseNumber = 123;
+        house1.houseAddress = "address line, eagan, mn - 55122";
+
+
+        House house2 = new House();
+        house2.houseNumber = 456;
+        house2.houseAddress = "address line, eagan, mn - 55122";
+
+        House house3 = new House();
+        house3.houseNumber = 789;
+        house3.houseAddress = "address line, eagan, mn - 55122";
+
+    }
+}
 ```
 
 ### Members/Properties of the class:
