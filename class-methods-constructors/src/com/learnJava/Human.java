@@ -11,20 +11,20 @@ public class Human {
     String legs;
     String eyes;
 
-    public void breath(){
+    public void breath(){ //method declaration
         System.out.println("Human is breathing with his nose");
     }
 
 
-    public void see(){
+    public void see(){ //method declaration
         System.out.println("Human is breathing with his eyes");
     }
 
-    public void punch(int minutes){
+    public void punch(int minutes){ //method declaration
         System.out.println("Punch for "+ minutes + " minutes.");
     }
 
-    public void walk(int minutes, int distance){
+    public void walk(int minutes, int distance){ //method declaration
         System.out.println("Walk "+ distance + " miles " +"for "+ minutes + " minutes.");
     }
 

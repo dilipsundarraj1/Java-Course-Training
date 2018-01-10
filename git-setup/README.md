@@ -15,7 +15,7 @@ https://git-scm.com/downloads
 
 ### Steps to use github.
 
-![](https://github.com/dsaish3/Java-Course-Training/tree/master/git-setup/images)
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/git-setup/images/github1.png)
 
 The below link has the steps on how to use github.
 

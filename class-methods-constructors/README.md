@@ -47,8 +47,8 @@ public class Sample{
     -   Method should be have the **static** keyword.
     -   Method should be have the **void** keyword.
     -   Method should have the string array as an input.
-    
-    
+
+
 ```aidl
 public class Sample{
 
@@ -71,9 +71,9 @@ public class Sample{
 
 
 ### Object/Instance in Java:
+- Java is an object oriented language.
+- Syntax to create an object/Instance.
 
--   Syntax to create an object/Instance.
- 
  ```aidl
 <class-name> <varialename> = new <classname>();
 ```
@@ -113,6 +113,8 @@ public class Student {
 **Analogy 2:**
 -   A class is equivalent to Person.
 -   Objects are that a person can be male/female, different name, different height etc. .
+
+
 
 
 ```aidl
@@ -160,7 +162,7 @@ public class Human {
     String legs;
     String eyes;
 
-  
+
 }
 ```
 
@@ -173,9 +175,9 @@ public class Human {
     -   You can breath with your nose.
     -   You can hear with your ears
     -   You can see with your eyes.
-    
 
-    
+
+
 #### Anatomy of a Method:
 
 -   Any method in Java will have the following.
@@ -199,11 +201,11 @@ public class Human {
 }
 
 ```
- 
+
  **Example**
- 
+
  **Method without Parameters:**
- 
+
  ```aidl
  public void breath(){
         System.out.println("Human is breathing with his nose");
@@ -230,7 +232,7 @@ public void walk(int minutes, int distance){
 
 ```
 
- 
+
 ##### Method Invocation:
 
 -   Use the **dot** operator.
@@ -246,6 +248,62 @@ public static void main(String[] args) {
         dilip.walk(5, 3);// method invocation with multiple paramters
 
 
+}
+```
+
+##### Method with return Type
+
+**Syntax**
+
+```
+<access-modifier> <returntype> methodName(){
+
+  return  <returntype>;
+}
+```
+
+**Returning an int**
+```
+public int addTwoNumbers() {
+
+        return 1+2;
+
+    }
+```    
+
+**Returning a String**
+```
+public String operation(){
+
+        return "ADD";
+    }
+```
+
+##### Method Invocation
+
+```
+public class Add {
+
+    public int addTwoNumbers() {
+
+        return 1+2;
+    }
+
+    public String operation(){
+
+        return "ADD";
+    }
+
+    public static void main(String[] args) {
+
+        Add add = new Add();
+
+        int sum = add.addTwoNumbers(); // Method invocation
+        System.out.println(sum); // printing a value
+        String operation = add.operation(); // Method invocation
+        System.out.println(operation); // printing a value
+
+    }
 }
 ```
 
@@ -265,7 +323,7 @@ public static void main(String[] args) {
 public class Person {
 
     public Person(){ // Default constructor
-        
+
     }
 }
 ```
@@ -288,6 +346,3 @@ public class Person {
         }
     }
 ```
-
- 
- 
