@@ -30,3 +30,5 @@
     - Constructor with parameters
     - Link:
       - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors
+    - Test
+      - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test
