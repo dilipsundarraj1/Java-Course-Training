@@ -5,7 +5,28 @@
   - Github Account Creation
   - IDEA Installation
   - Instructions to create JAVA project in INTELLIJ
-  
-  https://github.com/dsaish3/Java-Course-Training/blob/master/project-setup/First-Java-Project.md
-  
-  
+      https://github.com/dsaish3/Java-Course-Training/blob/master/project-setup/First-Java-Project.md
+  -   Link:
+      - https://github.com/dsaish3/Java-Course-Training/tree/master/project-setup
+
+
+### GitHub
+  - Create github Account
+  - Push the java Project that we created.
+  - Lab : Exploring git commands
+  -   Link:
+      - https://github.com/dsaish3/Java-Course-Training/tree/master/git-setup
+
+### Classes, Methods, Constructors
+  - Class
+    - Object/Instances in Java
+    - Relationship between Objects and Classes
+  - Methods/Functions
+    - Anatomy of a Method
+    - Method Declaration
+    - Method Invocation
+  - Constructors
+    - Default Constructor
+    - Constructor with parameters
+    - Link:
+      - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors
