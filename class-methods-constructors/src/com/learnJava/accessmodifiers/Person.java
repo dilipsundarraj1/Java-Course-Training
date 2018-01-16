@@ -1,11 +1,11 @@
-package com.learnJava;
+package com.learnJava.accessmodifiers;
 
 /**
- * Created by z001qgd on 1/3/18.
+ * Created by z001qgd on 1/16/18.
  */
 public class Person {
 
-    String gender;
+    private String gender;
     String name;
 
     public Person(){
@@ -17,7 +17,7 @@ public class Person {
         this.name = name;
     }
 
-    public String getName(){
+    private String getName(){
 
         return this.name;
     }
@@ -27,20 +27,6 @@ public class Person {
         Person dilip = new Person();
         dilip.gender="Male";
         dilip.name="dilip";
-
-        Person anshu = new Person();
-
-        anshu.gender="Female";
-        anshu.name="Anshu";
-
-
-        Person hema = new Person();
-        hema.gender="Female";
-        hema.name="Hema";
-
-        Person scooby = new Person("male", "Scooby");
-
-
 
     }
 }

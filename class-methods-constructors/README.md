@@ -401,3 +401,120 @@ public class Person {
         }
     }
 ```
+
+### Client/Driver Class
+
+-  A class is refered as a client class when we try to access a some other class from the current class.
+ 
+- In the below example we have created a **PersonClient** class that accesses the **Person** class.
+  
+```aidl
+public class PersonClient {
+
+    public static void main(String[] args) {
+
+        Person person = new Person("male", "Scooby");
+        System.out.println(person.getName());
+    }
+}
+```
+
+### Access/Visibility Modifiers:
+
+- There are four access modifiers in here.
+    -   private
+    -   public
+    -   protected
+    -   default
+    
+```aidl
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java4.png)
+```
+-   From the name it is clear that access modifiers are mainly used to define and control the access of the classes, members and methods.
+-   In Java it is not allowed to use access modifiers inside the method.
+
+**Example**
+
+```aidl
+public String getName(){
+        
+        public int i=0; // not allowed. You are not allowed to use access-modifiers inside a method. 
+        
+    }
+```
+
+#### private
+
+   -   If a method or variable is marked as private (has the private access modifier assigned to it), then only code inside the same class can access the variable, or call the method.
+   -   A class never be marked private.
+   -   No other class can access this method from outside the Person Class
+
+**private variable**
+
+-   **private** keyword will be part of the declaration. 
+ 
+```aidl
+private String gender;
+```
+**private method**    
+
+-   **private** keyword will be part of the declaration.
+
+```aidl
+private String getName(){
+
+        return this.name;
+    }
+```
+
+
+**Example**
+
+**Person**
+
+```aidl
+public class Person {
+
+    String gender;
+    String name;
+
+    public Person(){
+
+    }
+
+    public Person(String gender, String name) {
+        this.gender = gender;
+        this.name = name;
+    }
+
+    private String getName(){
+
+        return this.name;
+    }
+
+    public static void main(String[] args) {
+
+        Person dilip = new Person();
+        dilip.gender="Male";
+        dilip.name="dilip";
+
+    }
+}
+
+```
+
+**PersonClient**
+
+```aidl
+public class PersonClient {
+
+        public static void main(String[] args) {
+
+            Person person = new Person("male", "Scooby");
+            System.out.println(person.getName()); // This will give compilation issue because getName method is marked private.
+    }
+}
+
+```
+    
+    
