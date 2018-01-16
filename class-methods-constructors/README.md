@@ -473,16 +473,16 @@ private String getName(){
 **Person**
 
 ```aidl
-public class Person {
+public class PersonPrivate {
 
-    String gender;
+    private String gender;
     String name;
 
-    public Person(){
+    public PersonPrivate(){
 
     }
 
-    public Person(String gender, String name) {
+    public PersonPrivate(String gender, String name) {
         this.gender = gender;
         this.name = name;
     }
@@ -494,9 +494,10 @@ public class Person {
 
     public static void main(String[] args) {
 
-        Person dilip = new Person();
+        PersonPrivate dilip = new PersonPrivate();
         dilip.gender="Male";
         dilip.name="dilip";
+        System.out.println(dilip.getName()); // Calling a private method from the same class is allowed.
 
     }
 }
@@ -510,7 +511,7 @@ public class PersonClient {
 
         public static void main(String[] args) {
 
-            Person person = new Person("male", "Scooby");
+            PersonPrivate person = new PersonPrivate("male", "Scooby");
             System.out.println(person.getName()); // This will give compilation issue because getName method is marked private.
     }
 }
