@@ -419,7 +419,12 @@ public class PersonClient {
 }
 ```
 
-### Access/Visibility Modifiers:
+## Access/Non-Access Modifiers:
+
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java5.png)
+
+
+### Access Modifiers
 
 - There are four access modifiers in here.
     -   private
@@ -621,3 +626,137 @@ public class PersonalProtecedClient {
 
 -   There are no restrictions to this access-modifier. 
 -   You can access a class, method, variable from any where in the class.
+
+### Non-Access Modifiers:
+
+-   For now we are going to discuss about the following. Rest of the other non access modifiers are not widely used in everyday work.
+-   Lets focus on the below.
+    -   static
+    -   final
+    
+### The Static Modifier
+
+-   static is a reserverd keyword that you use it to name a variable varibale or method with static.
+-   **static** can be used with method or variables.
+    -   static variable
+    -   static method
+-   A static method or variable should always be accessed using the className not using the object/instance reference variable.
+-   A **Constructor** cannot have a **static** keyword.
+    -   This will give compilation issue.
+
+```aidl
+public class Train {
+
+    private int trainNumber; // instance variable
+   
+   
+    public static Train(){ // this is not allowed. Compilation issue
+        
+    }
+```
+
+    
+**static variable:**
+-   A variable that has a static keyword is called **static** variable or **class** variable.
+ 
+ **Syntax to invoke a static Variable:**
+ 
+```aidl
+ClassName.variableName;
+
+```
+ 
+```aidl
+public class Train {
+
+    private int trainNumber; // instance variable
+    private static int count=0; // static variable
+
+    public Train(int name) {
+        this.trainNumber = name;
+    }
+    
+    public static void main(String[] args) {
+
+        Train train1 = new Train(10);
+        train1.count = 1; // Wrong
+        Train.count =1; // Right
+
+
+        Train train2 = new Train(11);
+        train2.count = 2; // Wrong
+        Train.count =2; // Right
+    }
+}
+
+```
+
+**static methods:**
+
+-   A static method will have the static keyword as part of the method declaration.
+-   A static method cannot reference to a instance vaiable.
+
+ **Syntax to invoke a static method:**
+ 
+```aidl
+Classname.staticMethod;
+
+```
+
+**Example:**
+```aidl
+public static int changeTrainInstanceCount(){ //static method
+
+        return count++;
+    }
+
+```
+
+```aidl
+public class Train {
+
+    private int trainNumber; // instance variable
+    private static int count=0; // static variable
+
+    public Train(int name) {
+        this.trainNumber = name;
+    }
+    
+    public static int changeTrainInstanceCount(){ //static method
+
+        return count++;
+    }
+
+    public static void main(String[] args) {
+
+        Train train1 = new Train(10);
+        Train.count =1; // Right
+
+
+        Train train2 = new Train(11);
+        Train.count =2; // Right
+    }
+}
+
+```
+
+-   A compiler will issue if a static method try to access a non-static/instance variable.
+
+```aidl
+
+ public static int changeTrainInstanceCount(){ //static method
+        trainNumber = 3;//compilation issue
+        return count++;
+    }
+
+```
+
+#### Constants:
+
+-   Constants are mainly declared using the final modifier.
+-   You will have **final** and **static** keyword together.
+ 
+```aidl
+    private static final int salary=50000;
+```
+    
