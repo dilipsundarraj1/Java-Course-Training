@@ -427,9 +427,9 @@ public class PersonClient {
     -   protected
     -   default
     
-```aidl
+
 ![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java4.png)
-```
+
 -   From the name it is clear that access modifiers are mainly used to define and control the access of the classes, members and methods.
 -   In Java it is not allowed to use access modifiers inside the method.
 
@@ -517,5 +517,107 @@ public class PersonClient {
 }
 
 ```
+ 
+
+**default:**
+    -   Any class or class member declaration without any Visibility Modifiers is the default.
+    -   This class will be accessible only to other classes which are in the same package.
+
+```aidl
+class PersonDefault {
+
+    String gender;
+    public String name;
+
+    protected String getName(){
+
+        return this.name;
+    }
+
+    public String getGender(){
+        return this.gender;
+    }
+
+}
+```
+
+**PersonDefaultClient** in **com.learnJava.accessmodifiers.protectedd**
+
+-   This **PersonDefault** is accessible only to the classes in the same package. 
+-   In the below example, we are trying to access the **PersonDefault** class from a different class and this will give compilation issue.
+
+```aidl
+package com.learnJava.accessmodifiers.protectedd;
+
+/**
+ * Created by z001qgd on 1/17/18.
+ */
+public class PersonDefaultClient {
+
+    public static void main(String[] args) {
+
+        PersonDefault personDefault = new PersonDefault(); // Not accessible, compilation issue
+    }
+}
+
+```
+
+#### Protected:
+
+-   This is used only for variable and methods.
+-   This behaves the same as default, with the addition that subclasses can access protected methods and member variables (fields) of the superclass
     
-    
+**Example**
+
+**PersonProtected** in **com.learnJava.accessmodifiers.protectedd** package.
+
+```aidl
+package com.learnJava.accessmodifiers.protectedd;
+
+/**
+ * Created by z001qgd on 1/16/18.
+ */
+public class PersonProtected {
+
+    protected String gender;
+    public String name;
+
+    protected String getName(){
+
+        return this.name;
+    }
+
+    public String getGender(){
+        return this.gender;
+    }
+
+}
+
+```
+
+**PersonalProtecedClient** in **package com.learnJava.accessmodifiers.privatee;**
+
+-   In this example the client class is in a different package and the actual class is in a different package.
+
+```aidl
+package com.learnJava.accessmodifiers.privatee;
+
+import com.learnJava.accessmodifiers.protectedd.PersonProtected;
+
+public class PersonalProtecedClient {
+
+    public static void main(String[] args) {
+
+        PersonProtected personProtected = new PersonProtected();
+        personProtected.name;// Not accessible,compilation issue
+        personProtected.getGender();
+        personProtected.getName();// Not accessible,compilation issue
+    }
+}
+
+```
+
+**public**
+
+-   There are no restrictions to this access-modifier. 
+-   You can access a class, method, variable from any where in the class.

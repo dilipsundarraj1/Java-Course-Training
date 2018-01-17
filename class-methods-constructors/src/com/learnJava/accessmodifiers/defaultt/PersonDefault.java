@@ -1,11 +1,11 @@
-package com.learnJava.accessmodifiers.protectedd;
+package com.learnJava.accessmodifiers.defaultt;
 
 /**
  * Created by z001qgd on 1/16/18.
  */
-public class PersonProtected {
+class PersonDefault {
 
-    protected String gender;
+    String gender;
     public String name;
 
     protected String getName(){
