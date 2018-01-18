@@ -45,6 +45,7 @@
 ### Data Types
   - Primitive Data Types
   - Non Primitive Data Types
+  - Primitive Variable vs Reference Variable
   - Link:
     - https://github.com/dsaish3/Java-Course-Training/tree/master/data-types
   - Test
