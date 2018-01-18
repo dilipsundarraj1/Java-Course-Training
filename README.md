@@ -41,3 +41,11 @@
       - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors
     - Test
       - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test
+
+### Data Types
+  - Primitive Data Types
+  - Non Primitive Data Types
+  - Link:
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/data-types
+  - Test
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/data-types/test

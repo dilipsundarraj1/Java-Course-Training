@@ -127,7 +127,7 @@ OReilly_&_Associates // ampersand is not an alphanumeric character
 -   String,Arrays and etc.
 -   Classes are also referred to as non primitive data type.
 
-
+**Example 1**
 ```aidl
 
 public class NonPrimitiveDatatypes {
@@ -138,3 +138,73 @@ public class NonPrimitiveDatatypes {
     }
 }
 ```
+
+**Example 2**
+
+```aidl
+public class Car {
+
+    private  String model;
+    private  String make;
+
+    public Car(String model, String make) {
+        this.model = model;
+        this.make = make;
+    }
+
+    public static void main(String[] args) {
+
+        Car car = new Car("camry", "Toyota");
+    }
+}
+
+```
+
+### Primitive Variable vs Reference Variable
+ 
+ ```aidl
+int i =0; // i -> is a primitive variable
+Car car = new Car("camry", "Toyota"); // car is a reference variable.
+```
+-   There are two types of memory location in Java.
+    -   stack
+        -   This memory stores the variables and the primitive data type
+    -   heap
+        -   This location stores the Objects that gets created.
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java5.png)
+
+```aidl
+Car car = new Car("camry", "Toyota"); // car is a reference variable.
+```
+-   In this above example the following happens:
+    -   The Car object gets created in memory and it has a memory address
+    -   the **car** reference variable holds the memory address of the object.
+**Example**
+    
+```aidl
+public class Car {
+
+    private  String model;
+    private  String make;
+
+    public Car(String model, String make) {
+        this.model = model;
+        this.make = make;
+    }
+
+    public void changeModel(Car car1){
+        car1.model = "corolla";
+    }
+
+    public static void main(String[] args) {
+
+        Car car = new Car("camry", "Toyota");
+        System.out.println(car.model); // prints camry
+        car.changeModel(car); // changing the value to corolla
+        System.out.println("After the call");
+        System.out.println(car.model); // prints corolla
+    }
+}
+```
+    
+    
