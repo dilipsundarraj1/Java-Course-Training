@@ -42,7 +42,7 @@
     - Test
       - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test
 
-### Data Types
+### Data-Types/Operators in Java
   - Primitive Data Types
   - Non Primitive Data Types
   - Primitive Variable vs Reference Variable
