@@ -407,14 +407,86 @@ public class Person {
 -  A class is refered as a client class when we try to access a some other class from the current class.
  
 - In the below example we have created a **PersonClient** class that accesses the **Person** class.
-  
+
+**Person**
+```aidl
+public class Person {
+
+    String gender;
+    String name;
+    int age;
+
+    public Person(){
+
+    }
+
+    public Person(String gend,String na){
+        this.gender = gend;
+       this.name = na;
+
+    }
+
+
+    public void changeName(String nam){
+        this.name = nam;
+    }
+
+    public String getName(){
+
+        return this.name;
+    }
+
+    public static void main(String[] args) {
+
+        Person person1 = new Person("male", "Scooby");
+
+        System.out.println(person1.gender);
+
+        System.out.println(person1.name);
+
+        Person person2=null;
+
+        System.out.println(person2);
+
+        Person person3 = new Person();
+        person3.name="ddd";
+        person3.gender="female;";
+
+    }
+
+
+}
+
+```
+**PersonHelper**
+```aidl
+public class PersonHelper {
+
+    public void setAge(Person person){
+
+        person.age = 10;
+    }
+}
+```
+**PersonClient**
 ```aidl
 public class PersonClient {
 
     public static void main(String[] args) {
 
-        Person person = new Person("male", "Scooby");
+        Person person = new Person("male","Scooby"); // assignment happens here itself\
+        System.out.println(person);
         System.out.println(person.getName());
+        person.changeName("Dilip");
+        System.out.println(person.getName());
+
+        PersonHelper personHelper = new PersonHelper();
+
+
+        System.out.println(person.age);
+        personHelper.setAge(person);
+        System.out.println(person.age+","+person.getName()+","+person.gender);
+        System.out.println(person);
     }
 }
 ```
