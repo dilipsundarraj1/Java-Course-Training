@@ -70,6 +70,10 @@ public class PrimitiveDataTypes {
 
         double d = 90.0;
         System.out.println(d);
+        
+        float f =10.63984798274f; //prints this 10.639848 -> This cuts of some of the number after the decima
+        double d =10.3234234234d; //prints this 10.3234234234 -> More Precise
+
 
         boolean value= true;
         System.out.println(value);
@@ -208,4 +212,52 @@ public class Car {
 }
 ```
     
-    
+### Operators
+
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java6.png)
+
+#### Assignment Operators
+
+-   From the name we can say that this is used for assigning values.
+-   Lets go through the assignment variable one by one.
+
+
+```aidl
+= -> This is straight forward way of assigning a value to a variable.
+```
+**Example :**
+```aidl
+
+int a=2;
+float f = 1.2f;
+char c ='c';
+
+```
+```aidl
++= -> Add and Assign
+-= -> Substract and Assign
+*= -> Multiply and Assign
+/= -> Divide and Assign
+```
+
+**Examples**
+
+```aidl
+        int b=10;
+        b+=12; // equivalent to b =b+12
+        System.out.println(b); //22
+
+        int c=10;
+        c-=12; // equivalent to c =c-12
+        System.out.println(c); //-2
+
+        int e = 10;
+        e*=12; // equivalent to e =e*12
+        System.out.println(e);//120
+
+        int g = 10;
+        g/=5; // equivalent to g =g/5
+        System.out.println(g);//2
+```
+
+#### Arithmetic Operators

@@ -829,6 +829,6 @@ public class Train {
 -   You will have **final** and **static** keyword together.
  
 ```aidl
-    private static final int salary=50000;
+    public static  final String type ="TRAIN";
 ```
     
