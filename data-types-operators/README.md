@@ -261,3 +261,129 @@ char c ='c';
 ```
 
 #### Arithmetic Operators
+
+-   These operators are mainly used to performing arithmetic operations.
+
+```aidl
++ -> Addition
+- -> Subtraction
+* -> Multiplication
+/ -> Division
+% -> Modulus, this returns the remainder from the division
+++ -> Increment
+-- -> Decrement
+```
+
+##### Increment:
+
+-   This performs the addition of 1 to the current value.
+
+**PreIncrement:**
+
+```aidl
+int a = 5;
+System.out.println(++a); // Pre Increment , This prints 6 in the output.
+
+```
+-   This will first increment the value and prints it.
+
+**PostIncrement**
+
+```aidl
+int a = 5;
+System.out.println(a++); // Pre Increment , This prints 5 in the output.
+```
+
+
+##### Decrement:
+
+-   This performs the subtraction of 1 from the current value.
+
+
+#### Relational Operators
+
+
+-   These are mainly used to compare two values of same type.
+
+```
+> -> greater than.
+>= -> greater than or equal to 
+< -> Lesser than
+<= -> Lesser than or equal to
+== -> Equal to
+!= -> Not equal to
+```
+
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java7.png)
+
+```aidl
+ int a =5;
+        int b =2;
+        int c =5;
+
+        if(a>b){
+            System.out.println("a is greater than b");
+        }
+
+
+        if(a>=c){
+            System.out.println("a is equal to c");
+        }
+
+        if(b<a){
+            System.out.println("b is lesser than a");
+        }
+
+        if(b<=a){
+            System.out.println("b is lesser than a");
+        }
+
+
+
+        if(a==c){
+            System.out.println("a is equal to c");
+        }
+
+        if(a!=b){
+            System.out.println("a is not equal to b");
+        }
+
+    }
+```
+
+### Logical Operators
+
+-   Logical Operators are used to evaluate one or more expressions.
+-   There are three logical operators:
+    -   AND ->  &&
+    -   OR  ->  ||
+    -   NOT ->  !
+    
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java8.png)
+
+```aidl
+public class LogicalOperators {
+
+
+    public static void main(String[] args) {
+
+        int a =2;
+        int b = 1;
+        int c=3;
+
+        if(a>b && c>b){
+            System.out.println("Condition is true");
+        }
+
+        if(a>b || c<b){
+            System.out.println("Condition is true");
+        }
+
+        if(!(a<b)){
+            System.out.println("Condition is true");
+        }
+
+
+    }
+}
+```
