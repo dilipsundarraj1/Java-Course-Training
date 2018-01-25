@@ -415,3 +415,4 @@ public class OrderPrecedence {
 
 ### Wrapper Classes
 
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/data-types/images/WrapperClass.png)
