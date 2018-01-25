@@ -46,6 +46,12 @@
   - Primitive Data Types
   - Non Primitive Data Types
   - Primitive Variable vs Reference Variable
+  - Operators
+    - Assignment
+    - Arithmetic
+    - Relational
+    - Logical
+  - Wrapper Classes
   - Link:
     - https://github.com/dsaish3/Java-Course-Training/tree/master/data-types-operators
   - Test
