@@ -415,4 +415,204 @@ public class OrderPrecedence {
 
 ### Wrapper Classes
 
-![](https://github.com/dsaish3/Java-Course-Training/blob/master/data-types-operators/images/WrapperClass.pnggit )
+**Hierarchy**
+
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/data-types-operators/images/WrapperClass.png )
+
+#### How to create an object of Wrapper Classes ?
+
+```aidl
+
+            int x =2; // Assigning a value to a int variable. Only one approach
+    
+            Integer ii=2; // assigning the value
+    
+            Integer i2=new Integer(2); // Using the new operator
+    
+            Integer i3=new Integer("2"); // using the String value
+    
+            Integer i4=Integer.valueOf("6"); //Using the valueOf method.
+```
+
+#### Advantages of wrapper classes over regular Primitive types?
+
+-   Wrapper object has methods which we can use it in order to convert it to different types.
+
+```aidl
+        System.out.println(i4.floatValue()); // Integer to a float value
+
+        System.out.println(i4.doubleValue()); // Integer to a double value
+
+        System.out.println(i4.byteValue()); // Integer to a byte value
+
+        System.out.println(i4.longValue()); // Integer to a long value
+
+        System.out.println(i4.shortValue()); // Integer to a short value
+```
+
+#### How to compare two wrapper objects ?
+
+-   There are three approaches to compare two objects to be equal.
+    -   using the **==** operator
+    -   using the **equals** method.
+    -   using the **compareTo** method.
+    
+**==**
+
+-   You have to be really careful when using this operator. This just compares whether the two objects refer to the same object or not.
+
+-   This wont be equal because this just compares the memory address not the actual value each object holds.
+
+```aidl
+        Integer i1 = new Integer(500);
+
+        Integer i2 = new Integer(500);
+
+        System.out.println(i1==i2); // This wont be equal because this just compares the memory address not the actual value each object holds
+```
+
+**equals**
+
+-   This approach actually compares the values of the two objects.
+
+```aidl
+Integer i1 = new Integer(500);
+
+Integer i2 = new Integer(500);
+
+System.out.println(i1.equals(i2)); // 
+```
+
+**compareTo**
+
+-`This is again used to compare integers but it returns a number based on a result.
+
+
+```aidl
+        /**
+         * equals
+         */
+        System.out.println(i2.compareTo(i1)); // returns 0 because i2 and i1 are equal.
+
+        /**
+         * i2 > i3
+         */
+        System.out.println(i2.compareTo(i3)); // returns 1 because i2 is greater than i3.
+
+        /**
+         * i3 < i2
+         */
+        System.out.println(i3.compareTo(i2)); // returns -1 because i3 is lesser than i3.
+
+```
+
+### Boolean, Character
+
+**Boolean**
+
+-   Boolean wrapper class is used to represent the boolean type and this is not part of the member family.
+```aidl
+        Boolean b = false;
+        System.out.println(b);
+        Boolean b1 = new Boolean(false);
+        System.out.println(b1);
+        Boolean b2 = new Boolean("true");
+        System.out.println(b2);
+        Boolean b3 = new Boolean("x");
+        System.out.println(b3);
+```
+
+
+**Comparing Boolean**
+
+-   We can use the **compareTo** method to compare the values.
+
+```aidl
+        Boolean b = false;
+        System.out.println(b);
+        Boolean b1 = new Boolean(false);
+        System.out.println(b1);
+        Boolean b2 = new Boolean("true");
+        System.out.println(b2);
+        Boolean b3 = new Boolean("x");
+        System.out.println(b3);
+        
+        System.out.println(b.compareTo(b1)); // returns 0 , both are equal
+        System.out.println(b3.compareTo(b2));// returns -1 , false.equals(true)
+        System.out.println(b2.compareTo(b3));// returns 1 , true.equals(false)
+```
+
+
+
+**Character**
+
+-   Character class is a wrapper class to represent a Character.
+
+```aidl
+        Character c = new Character('C');
+        System.out.println(c);
+
+        Character c1 = 'D';
+        System.out.println(c1);
+
+        Character c2 = Character.valueOf('B');
+        System.out.println(c2);
+```
+
+**Comparing Characters:**
+
+-   There are three approaches to compare two objects to be equal.
+    -   using the **==** operator
+    -   using the **equals** method.
+    -   using the **compareTo** method.
+    
+**==**
+
+-   You have to be really careful when using this operator. This just compares whether the two objects refer to the same object or not.
+
+-   This wont be equal because this just compares the memory address not the actual value each object holds.
+
+```aidl
+        Character c = new Character('C');
+
+        Character c1 = 'D';
+
+
+        Character c2 = Character.valueOf('D');
+
+        System.out.println(c1 == c2); // false
+```
+**equals**
+
+-   This approach actually compares the values of the two objects.
+
+```aidl
+Character c1 = 'D';
+
+
+        Character c2 = Character.valueOf('D');
+System.out.println(c1.equals(c2)); // true
+```
+
+**compareTo**
+
+-   The below link has the table which has the ascii value for each character
+https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
+
+```aidl
+        Character c = new Character('C');
+
+        Character c1 = 'D';
+
+        Character c2 = Character.valueOf('D');
+
+        /**
+         * c=67
+         * c1=68
+         * c2=68
+         */
+        System.out.println(c1.compareTo(c)); // 1 , 68 > 67
+        System.out.println(c.compareTo(c1)); //-1 , 67<68
+        System.out.println(c1.compareTo(c2)); // 0, 68=68
+
+```
