@@ -176,7 +176,7 @@ Car car = new Car("camry", "Toyota"); // car is a reference variable.
     -   heap
         -   This location stores the Objects that gets created.
         
-![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java7.png)
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java6.png)
 
 ```aidl
 Car car = new Car("camry", "Toyota"); // car is a reference variable.
