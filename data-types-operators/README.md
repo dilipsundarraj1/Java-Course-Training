@@ -519,10 +519,11 @@ System.out.println(i1.equals(i2)); //
 
 **compareTo**
 
--`This is again used to compare integers but it returns a number based on a result.
+-This is again used to compare integers but it returns a number based on a result.
 
 
-``public class ComparingIntegers {
+```
+public class ComparingIntegers {
   
       public static void main(String[] args) {
   
