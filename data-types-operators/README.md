@@ -214,8 +214,6 @@ public class Car {
     
 ### Operators
 
-![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/java6.png)
-
 #### Assignment Operators
 
 -   From the name we can say that this is used for assigning values.
