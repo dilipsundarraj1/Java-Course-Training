@@ -562,7 +562,7 @@ public class ComparingIntegers {
 
 **Boolean**
 
--   Boolean wrapper class is used to represent the boolean type and this is not part of the member family.
+-   Boolean wrapper class is used to represent the boolean type and this is not part of the number family.
 ```aidl
         Boolean b = false;
         System.out.println(b);

@@ -37,6 +37,8 @@
     - Non Access Modifiers
       - static
       - final
+    - How to Debug a program in intellij
+      - https://youtu.be/GzK4nualMAY
     - Link:
       - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors
     - Test
