@@ -7,6 +7,6 @@ public class PersonDefaultClient {
 
     public static void main(String[] args) {
 
-        PersonDefault personDefault = new PersonDefault();
+    //    PersonDefault personDefault = new PersonDefault();
     }
 }

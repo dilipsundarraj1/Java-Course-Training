@@ -8,6 +8,10 @@
       https://github.com/dsaish3/Java-Course-Training/blob/master/project-setup/First-Java-Project.md
   -   Link:
       - https://github.com/dsaish3/Java-Course-Training/tree/master/project-setup
+### Useful Videos:
+  - How to Debug a program in intellij
+    - https://youtu.be/GzK4nualMAY
+  - How to import a project in eclipse
 
 
 ### GitHub
@@ -58,3 +62,18 @@
     - https://github.com/dsaish3/Java-Course-Training/tree/master/data-types-operators
   - Test
     - https://github.com/dsaish3/Java-Course-Training/tree/master/data-types-operators/test
+
+### Variable Scopes and Encapsulation
+  - Variable Scopes
+    - Local Variables
+    - Method parameters
+    - Instance Variables
+    - Class Variables
+  - Objects Lifecycle
+  - Garbage Collection
+  - Overloaded Methods
+  - Encapsulation
+  - Link:
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors
+  - Test
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test

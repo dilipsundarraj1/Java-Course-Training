@@ -10,8 +10,8 @@ public class PersonalProtecedClient {
     public static void main(String[] args) {
 
         PersonProtected personProtected = new PersonProtected();
-        personProtected.name;// Not accessible,compilation issue
+       // personProtected.name;// Not accessible,compilation issue
         personProtected.getGender();
-        personProtected.getName();// Not accessible,compilation issue
+       // personProtected.getName();// Not accessible,compilation issue
     }
 }
