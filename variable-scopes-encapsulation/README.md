@@ -290,3 +290,172 @@ Runtime.getRuntime().gc();
 ```
 
 -   But there is no guarantee that this will start the GC process. But it just starts the execution.
+
+
+### Overloaded Method
+
+- An overloaded method is a method with the same name but with different parameters/arguments. 
+
+-   In the below example we have the same method **multiply** which is accepting different arguments or no arguments.
+ 
+```aidl
+public class Multiplication {
+
+
+    public int multiply(int i, int i1) {
+
+        return i*i1;
+    }
+
+    public int multiply(int i, int i1,int i2) { // Same Method name with three integers , THis is called method overloading
+
+        return i*i1*i2;
+    }
+
+    public String multiply(){ // Same Method with no arguments , THis is called method overloading
+
+        return "Hello";
+    }
+
+
+    public static void main(String[] args) {
+
+        Multiplication multiplication = new Multiplication();
+
+        int result = multiplication.multiply(1,2);
+
+        System.out.println("Multiplciation of two numbers : "+result); // result is 2
+
+       result =  multiplication.multiply(1,2,3);
+
+        System.out.println("Multiplciation of three numbers : "+result);  // result is 6
+
+        System.out.println("Text from Multiply  : " + multiplication.multiply()); // prints the String "Hello"
+
+    }
+
+
+}
+```
+
+### Encapsulation
+
+-   Encapsulation in Java means, hiding the members/methods to the outside world. 
+-   The only way we can hide the members/methods is by marking them with **private** access modifier.
+-   Providing the access to the members through methods.
+
+
+**Example Without Encapsulation**
+
+```aidl
+public class PersonWithoutEncapsulation {
+
+    public String firstName; // public accessmodifier
+    public String lastName;// public accessmodifier
+    public int age;// public accessmodifier
+
+    @Override
+    public String toString() {
+        return "PersonWithoutEncapsulation{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+```
+**PersonClient**
+
+```
+public class PersonClient {
+
+    public static void main(String[] args) {
+
+        PersonWithoutEncapsulation person1 = new PersonWithoutEncapsulation();
+        person1.age=-10; // This allows a negative value for a age which is not correct.
+        person1.firstName="xyz";
+        person1.lastName="abc";
+
+        System.out.println(person1); // PersonWithoutEncapsulation{firstName='xyz', lastName='abc', age=-10}
+    }
+}
+```
+**Example With Encapsulation**
+
+```
+public class PersonWithEncapsulation {
+
+    private String firstName;  // private access modifier
+    private String lastName;// private access modifier
+    private int age;// private access modifier
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    /**
+     * You can write the logic to handle it. We have control over the values that are being sent from the client.
+     * @param age
+     */
+    public void setAge(int age) {
+        if(age < 0){
+            age =10;
+        }
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonWithEncapsulation{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
+```
+**PersonClient**
+
+```aidl
+public class PersonClient {
+
+    public static void main(String[] args) {
+
+        PersonWithEncapsulation person2 = new PersonWithEncapsulation();
+
+        //person2.age=-10; //Not accessible, so that we can set the value as -10 for a age which is not a valid scenario.
+
+        person2.setAge(-10);
+        person2.setFirstName("xyz");
+        person2.setFirstName("abc");
+
+        System.out.println(person2);
+
+
+    }
+}
+
+```
+
+
+#### Why encapsulation ?
+
+-   With encapsulation, we can control the input that is being passed from the client.
+-   We can validate the users input before being passed assigned to an object.
