@@ -75,6 +75,6 @@
   - Overloaded Methods
   - Encapsulation
   - Link:
-    - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/variable-scopes-encapsulation
   - Test
     - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test
