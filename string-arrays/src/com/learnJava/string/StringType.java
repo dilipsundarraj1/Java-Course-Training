@@ -7,15 +7,21 @@ public class StringType {
 
     public static void main(String[] args) {
 
-        //int i =0;
 
         String s="Hello World";
-        s="Hello World1";
-        String s2 = s;
-        System.out.println(s);
+
+        String s1="Hello World";
+
+
+        System.out.println(s==s1);
 
         String str = new String("Hello");
 
-        System.out.println(str);
+        String str1 = new String("Hello");
+
+        System.out.println(str==str1);
+
+
+
     }
 }
