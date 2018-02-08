@@ -11,7 +11,7 @@
 ### Useful Videos:
   - How to Debug a program in intellij
     - https://youtu.be/GzK4nualMAY
-  - How to import a project in eclipse
+  - How to import a project in intelliJ
     - https://youtu.be/Aln2zfqMoX8
 
 
@@ -75,6 +75,6 @@
   - Overloaded Methods
   - Encapsulation
   - Link:
-    - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/variable-scopes-encapsulation
   - Test
     - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test
