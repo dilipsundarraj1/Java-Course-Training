@@ -100,7 +100,7 @@ public class StirngImmutable {
 -   The number for each position is called an **index** or **subscript**.
 
 
-### How to Declare an array ?
+### How to Declare/intialize an array ?
 
 -   In Java , Arrays are objects. To create an array, you must create a reference to the array.
 
