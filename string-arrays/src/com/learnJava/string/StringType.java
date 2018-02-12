@@ -21,6 +21,8 @@ public class StringType {
 
         System.out.println(str==str1);
 
+        System.out.println(str.equals(str1));
+
 
 
     }
