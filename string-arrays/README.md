@@ -542,7 +542,30 @@ public class ArrayExample {
    
 ```
 
-### MultiDimenstional Arrays
+#### When do we use Arrays?
+
+
+### ArrayList
+
+-   ArrayList is a type of collection which is used to store a data of one type.
+-   Size of the array list can grow dynamically as we add elements in to it.
+-   This has many more advantages over the arrays.
+
+**Declaration of Arraylist:**
+
+```aidl
+public class ArrayListExample {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> arrayList = new ArrayList<String>();
+    }
+}
+```
+
+#### How to add elements in to an Array List ?
+
+
 
 
 
