@@ -94,4 +94,4 @@
   - Link:
     - https://github.com/dsaish3/Java-Course-Training/tree/master/string-arrays
   - Test
-    - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/string-arrays/test
