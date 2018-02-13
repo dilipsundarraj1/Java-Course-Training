@@ -38,11 +38,13 @@ public class ArrayListObjects {
 
         ArrayList<Student> studentCopyList = studentList;
 
-
+        System.out.println(studentCopyList == studentList); // returns true, both refer to the same objects.
 
         ArrayList<Student> studentCloneList = (ArrayList<Student>) studentList.clone();
 
         System.out.println(studentCloneList == studentList); // returns false
 
+
+        System.out.println(student.equals(student4)); // returns true
     }
 }

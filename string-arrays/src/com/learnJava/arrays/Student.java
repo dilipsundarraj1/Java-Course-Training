@@ -21,4 +21,10 @@ public class Student {
         this.name = name;
         this.school = school;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Student student = (Student) obj;
+        return this.name.equals(student.name); // we consider the student is the same if their names are same.
+    }
 }

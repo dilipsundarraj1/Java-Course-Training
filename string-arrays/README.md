@@ -943,3 +943,93 @@ public class ArrayListObjects {
 
 -   **clone()** is a method in arraylist which is used to create a copy of the arraylist.
 
+```aidl
+public class ArrayListObjects {
+
+    public static void main(String[] args) {
+
+        ArrayList<Student> studentList = new ArrayList<Student>();
+
+        Student student = new Student("xyz","abc");
+        Student student1 = new Student("xyz1","abc1");
+        Student student2 = new Student("xyz2","abc2");
+        Student student3 = new Student("xyz3","abc3");
+        Student student4 = new Student("xyz","abc4");
+
+        studentList.add(student);
+        studentList.add(student1);
+        studentList.add(student2);
+        studentList.add(student3);
+        studentList.add(student4);
+
+        System.out.println(studentList); // prints [Student{name='xyz', school='abc'}, Student{name='xyz1', school='abc1'}, Student{name='xyz2', school='abc2'}, Student{name='xyz3', school='abc3'}, Student{name='xyz4', school='abc4'}]
+        
+        ArrayList<Student> studentCopyList = studentList;
+        System.out.println(studentCopyList == studentList); // returns true, both refer to the same objects.
+        
+        ArrayList<Student> studentCloneList = (ArrayList<Student>) studentList.clone();
+        System.out.println(studentCloneList == studentList); // returns false, they both point to different objects.
+
+    }
+}
+
+```
+
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/string-arrays/images/array-list-1.png)
+
+
+
+### How to compare Objects Equality ?
+
+-   We know how to compare two strings, using the equals method.
+-   In order to compare and find the equality of two user defined objects then we need to override the equals methodd from the Object class.
+-   Student class with the **equals** method.
+
+**Student**
+
+```
+public class Student {
+
+    private String name;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", school='" + school + '\'' +
+                '}';
+    }
+
+    private String school;
+
+    public Student(String name, String school) {
+        this.name = name;
+        this.school = school;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Student student = (Student) obj;
+        return this.name.equals(student.name);  // we consider the student is the same if their names are same.
+    }
+}
+```
+
+
+```
+public class StudentClient {
+
+    public static void main(String[] args) {
+
+            Student student = new Student("xyz","abc");
+            Student student1 = new Student("xyz1","abc1");
+            Student student2 = new Student("xyz2","abc2");
+            Student student3 = new Student("xyz3","abc3");
+            Student student4 = new Student("xyz","abc4");
+
+            System.out.println(student.equals(student4)); // returns true
+        
+    }
+}
+
+```
