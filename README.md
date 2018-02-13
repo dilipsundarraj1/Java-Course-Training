@@ -78,3 +78,20 @@
     - https://github.com/dsaish3/Java-Course-Training/tree/master/variable-scopes-encapsulation
   - Test
     - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test
+
+### Stings , Arrays and Arraylist:
+  - String
+    - String Equality
+    - String is Immutable
+    - String Methods
+    - Method Chaining
+  - StringBuilder
+  - StringBuffer
+  - String vs StringBuilder vs StringBuffer
+  - Arrays
+  - Arrays of Objects
+  - ArrayList
+  - Link:
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/string-arrays
+  - Test
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/class-methods-constructors/test
