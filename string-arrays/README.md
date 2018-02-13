@@ -513,7 +513,6 @@ numArray[4]=99//Filling/assigns a value at index 4
 -   Index of the array aways starts with zero
 -   The last index of the array is always length-1
 
-
 ### How to iterate an array ?
 
 -   This method is used to iterate each and every array and prints it in the console.
@@ -540,6 +539,91 @@ public class ArrayExample {
                     System.out.println(i);
     }
    
+```
+
+### Object Array:
+
+**Student**
+
+```
+public class Student {
+
+    private String name;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", school='" + school + '\'' +
+                '}';
+    }
+
+    private String school;
+
+    public Student(String name, String school) {
+        this.name = name;
+        this.school = school;
+    }
+}
+```
+
+**StudentCollection**
+
+```aidl
+public class StudentCollection {
+
+    private Student[] students = new Student[5];
+    int count=0;
+
+    public Student[] getStudents() {
+        return students;
+    }
+
+    public void setStudents(Student[] students) {
+        this.students = students;
+    }
+
+
+    public void addStudent(Student student) {
+        students[count] = student;
+        count =count+1;
+    }
+
+    public void printStudents(){
+
+        for(Student stu : students)
+            System.out.println(stu);
+    }
+}
+```
+
+**StudentCollectionClient**
+
+```aidl
+public class StudentCollectionClient {
+
+    public static void main(String[] args) {
+
+        Student student = new Student("xyz","abc");
+        Student student1 = new Student("xyz1","abc1");
+        Student student2 = new Student("xyz2","abc2");
+        Student student3 = new Student("xyz3","abc3");
+        Student student4 = new Student("xyz4","abc4");
+
+        StudentCollection studentCollection = new StudentCollection();
+        studentCollection.addStudent(student);
+        studentCollection.addStudent(student1);
+        studentCollection.addStudent(student2);
+        studentCollection.addStudent(student3);
+        studentCollection.addStudent(student4);
+
+        studentCollection.printStudents();
+
+        //studentCollection.addStudent(student4);//Array Index Out of bounds exception
+
+    }
+}
+
 ```
 
 #### When do we use Arrays?
