@@ -628,6 +628,7 @@ public class StudentCollectionClient {
 
 #### When do we use Arrays?
 
+-   Whenever we want to represent the collection of an object or collection of primitive types then we will use arrays.
 
 ### ArrayList
 
@@ -649,7 +650,296 @@ public class ArrayListExample {
 
 #### How to add elements in to an Array List ?
 
+**add**
+-   There is a handy add method is used to add elements in to the array list.
 
 
+```aidl
+public class ArrayListExample {
 
+    public static void main(String[] args) {
+
+        ArrayList<String> names = new ArrayList<String>();
+
+        names.add("ADAM");
+        names.add("Dan");
+        names.add("Alex");
+    }
+}
+```
+
+#### How to access elements from an array ?
+
+**Approach 1**
+
+**Syntax**
+
+```aidl
+
+for(Type <variable-name> : arrayList){
+            System.out.println(str);
+}
+
+```
+
+**Example**
+```aidl
+ for (String str : names){  // for(Type <variable-name> : arrayList){
+            System.out.println(str); //System.out.println(str);
+                                     //}
+        }
+```
+
+**Using Iterator**
+
+```aidl
+        ListIterator<String>  iterator  = names.listIterator();
+        while ((iterator.hasNext())){ // does it have any elements
+            System.out.println(iterator.next()); // fetches the next element in the arrayList.
+        }
+```
+
+#### How to modify/update the elements in the arrayList
+
+-   Each and every elements in the array list has an index attached to it and it starts from 0.
+
+```aidl
+  ArrayList<String> names = new ArrayList<String>();
+ 
+         /**
+          * adding the elements using the add method
+          */
+         names.add("ADAM");
+         names.add("Dan");
+         names.add("Alex");
+ 
+         System.out.println("list is " + names); // prints [ADAM, Dan, Alex]
+ 
+         names.set(0,"Micheal");
+ 
+ 
+         System.out.println("modified list is  : " + names); // [Micheal, Dan, Alex], first index is changed
+
+```
+
+#### How to delete the elements in the arrayList
+
+**remove**
+
+**Approach 1**
+
+-   By passing the actual object you want to return.
+
+```aidl
+   ArrayList<String> names = new ArrayList<String>();
+
+        /**
+         * adding the elements using the add method
+         */
+        names.add("ADAM");
+        names.add("Dan");
+        names.add("Alex");
+
+        System.out.println("list is " + names); // prints //[ADAM, Dan, Alex]
+        
+        names.set(0,"Micheal");
+
+        names.remove("Dan"); // This removed the element "Dan" from the list.
+
+        System.out.println("new list is  : " + names);// prints [Micheal, Alex]
+
+```
+
+**Approach 2**
+
+-   By passing the index of the object you want to remove.
+
+```aidl
+
+        ArrayList<String> names = new ArrayList<String>();
+
+        /**
+         * adding the elements using the add method
+         */
+        names.add("ADAM");
+        names.add("Dan");
+        names.add("Alex");
+
+        System.out.println("list is " + names); // prints //[ADAM, Dan, Alex]
+        names.set(0,"Micheal");
+
+      //  names.remove("Dan"); // This removed the element "Dan" from the list.
+
+        names.remove(1); //This removes the value in the  1st index.
+
+        System.out.println("new list is  : " + names);// prints [Micheal, Alex]
+
+```
+
+#### How to add Multiple elements in the list.
+
+**addAll**
+
+-   This method is used to add all the elements to the existing arraylist.
+
+```aidl
+ public class ArrayListExample {
+ 
+     public static void main(String[] args) {
+ 
+         ArrayList<String> names = new ArrayList<String>();
+ 
+         /**
+          * adding the elements using the add method
+          */
+         names.add("ADAM");
+         names.add("Dan");
+         names.add("Alex");
+ 
+         System.out.println("list is " + names); // prints //[ADAM, Dan, Alex]
+ 
+         ArrayList<String> names2 = new ArrayList<String>();
+         names2.add("Amy");
+         names2.add("Jenny");
+         names2.add("Jack");
+ 
+         names.addAll(names2);
+ 
+         System.out.println("new list is " + names); // prints [ADAM, Dan, Alex, Amy, Jenny, Jack]
+ 
+     }
+}
+
+```
+
+### Additional Methods in ArrayList:
+
+**clear**
+
+-   This method wipes out the whole array list.
+
+```aidl
+public class ArrayListExample {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> names = new ArrayList<String>();
+
+        /**
+         * adding the elements using the add method
+         */
+        names.add("ADAM");
+        names.add("Dan");
+        names.add("Alex");
+
+        System.out.println("list is " + names); // prints //[ADAM, Dan, Alex]
+
+        names.clear(); // wipes out the arraylist
+
+        System.out.println("New list is : "+ names);// prints []
+
+    }
+}
+
+```
+
+**size**
+
+-   prints the size of the array list.
+
+**indexOf()**
+
+-   This method returns the index of the element that you are looking for.
+
+-   If the element not available then the result will be **-1**.
+
+```
+public class ArrayListExample {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> names = new ArrayList<String>();
+
+        /**
+         * adding the elements using the add method
+         */
+        names.add("ADAM");
+        names.add("Dan");
+        names.add("Alex");
+
+        System.out.println("list is " + names); // prints //[ADAM, Dan, Alex]
+
+        System.out.println(names.indexOf("Dan")); // prints 1
+
+        System.out.println(names.indexOf("abc")); // prints -1
+        
+        }
+    }        
+```
+
+**lastIndexOf**
+
+-   Lets say you have the same element multiple times then this returns the last index of that element.
+
+```
+public class ArrayListExample {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> names = new ArrayList<String>();
+
+        /**
+         * adding the elements using the add method
+         */
+        names.add("ADAM");
+        names.add("Dan");
+        names.add("Alex");
+        names.add("ADAM");
+
+        System.out.println(names.lastIndexOf("ADAM")); // prints 3, even though we have the same element in the 0th index.
+        
+        }
+     }
+```
+
+### ArrayList Of Objects
+
+-   In this exampe we are going to add the list of student objects to an arraylist.
+```
+public class ArrayListObjects {
+
+    public static void main(String[] args) {
+
+        ArrayList<Student> studentList = new ArrayList<Student>();
+
+        Student student = new Student("xyz","abc");
+        Student student1 = new Student("xyz1","abc1");
+        Student student2 = new Student("xyz2","abc2");
+        Student student3 = new Student("xyz3","abc3");
+        Student student4 = new Student("xyz","abc4");
+
+        studentList.add(student);
+        studentList.add(student1);
+        studentList.add(student2);
+        studentList.add(student3);
+        studentList.add(student4);
+
+        System.out.println(studentList); // prints [Student{name='xyz', school='abc'}, Student{name='xyz1', school='abc1'}, Student{name='xyz2', school='abc2'}, Student{name='xyz3', school='abc3'}, Student{name='xyz4', school='abc4'}]
+
+
+        /**
+         * How to Iterate an array
+         */
+
+        for(Student stu : studentList){
+            System.out.println(stu);
+        }
+
+    }
+}
+```
+
+### Cloning an ArrayList:
+
+-   **clone()** is a method in arraylist which is used to create a copy of the arraylist.
 
