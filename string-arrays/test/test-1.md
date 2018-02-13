@@ -9,7 +9,7 @@
         
     - Create a Stringbuilder object.
         -   Using the append method add a string to it.
-        -   Use the reverse method and reverse the String.                            
+        -   Use the reverse method and rev                            
     - Create a Stringbuffer object.
         -   Using the append method add a string to it.
                 

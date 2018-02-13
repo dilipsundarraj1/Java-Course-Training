@@ -1,0 +1,12 @@
+- Create a class named **ArrayTest**
+    -   Create an int array of name **intArray** with the size of 5 elements.
+        -   Populate the all the index with the values you want.
+        -   Write a forloop that prints all the values in the array.
+        -   print the total lenght of the array.
+    -   Create a Car class and members of the class are owner and model.'
+        -   Create a CarCollection class and create an array of type Car with the size 5.
+            -   create a method named **addCcar** which should accept a car as an input and add it in to the car aray.
+            -   create a printCars method which shouls print all the cars.
+         -  Create a CarClient class and call the method addCar CarCollection and add it to the car array.
+            -   Call the addCar method 5 times and fill in the array with 5 elements.
+            -   Call the printCars method to print the whole Car objects.
