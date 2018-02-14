@@ -50,6 +50,8 @@ public class StringType {
 
 ```
 
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/string-equality.png)
+
 Whats the difference ?  
 
 -   In Java , there is a concept String pool which is part of the heap specific for String. 
