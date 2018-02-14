@@ -50,7 +50,7 @@ public class StringType {
 
 ```
 
-![](https://github.com/dsaish3/Java-Course-Training/blob/master/images/string-equality.png)
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/string-arrays/images/string-equality.png)
 
 Whats the difference ?  
 
