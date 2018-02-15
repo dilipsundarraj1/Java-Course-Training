@@ -198,5 +198,56 @@ public class ComparingTimes {
 
 ## Converting from one type to another
 
+-   Combining both date and time will provide a new object named DateTime.
+
+```aidl
+public class ConvertTypes {
+
+    public static void main(String[] args) {
 
 
+        LocalTime time = LocalTime.of(22, 11, 0);
+        LocalDate date = LocalDate.of(2018,02,11);
+        LocalDateTime dateTime = time.atDate(date);
+        System.out.println(dateTime); // prints 2018-02-11T22:11 , it combines both date and time.
+
+    }
+}
+```
+
+### LocalDateTime
+
+-   LocalDateTime is a library which is part of the Java Library itself.
+
+**Example**
+
+**Approach 1**
+```aidl
+public class LocalDateTimeExample {
+
+    public static void main(String[] args) {
+
+        LocalDateTime dateTimeNow = LocalDateTime.now();
+
+        System.out.println("current date time of the machine is : " + dateTimeNow); // prints the machines current date and time . Eg.,2018-02-15T14:50:15.678
+    }
+}
+```
+
+**Approach 2:**
+
+-   Create a LocalDateTime instance using the **parse** method.
+
+```aidl
+LocalDateTime dateTimeNow1 = LocalDateTime.parse("2018-11-09T11:00:45");
+
+System.out.println(dateTimeNow);
+```
+
+### Period
+
+-   This is another library that is part of the time libraries in Java. But it is hardly used, so we are not going to cover it.
+-   If interested , please check it in the book.
+
+
+## DateTimeFormatter
