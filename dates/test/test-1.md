@@ -1,3 +1,13 @@
 - Create a class named **LocalDateTimeTest**
-    -   Create the instance of localdatetime and print the curent time of the machine.
-    -   Check the LocalDate and LocalTime funcitons and do
+    -   Create the instance of LocalDate and print the curent time of the machine.
+        -   Use the parse method to create the LocalDate instance
+        -   Use the plus and minus methods to add and subtract the dates.    
+        -   Use the compare method to compare the dates
+    -   Create the instance of LocalTime and print the curent time of the machine.
+        -   Use the parse method to create the LocalTime instance
+        -   Use the plus and minus methods to add and subtract the times.
+        -   Use the compare method to compare the times
+    -   Create the instance of LocalDateTime and print the curent time of the machine.
+         -   Use the parse method to create the LocalDateTime instance
+         -   Use the plus and minus methods to add and subtract the date and times.
+         -   Use the compare method to compare the times.    
