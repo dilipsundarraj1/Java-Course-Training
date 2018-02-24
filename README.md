@@ -106,7 +106,7 @@
 - Test
   - https://github.com/dsaish3/Java-Course-Training/tree/master/dates/test
 
-### dates:
+### control-flow-statements:
 - if-else-if
 - ternary
 - Switch
