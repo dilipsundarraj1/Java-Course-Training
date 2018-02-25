@@ -9,8 +9,8 @@ public class FileOutputStreamExample {
 
         try{
 
-            FileOutputStream fout=new FileOutputStream("D:\\testout.txt");
-            String s="Welcome to javaTpoint.";
+            FileOutputStream fout=new FileOutputStream("/Dilip/input/testout.txt");
+            String s="Hello World.";
             byte b[]=s.getBytes();//converting string into byte array
             fout.write(b);
             fout.close();

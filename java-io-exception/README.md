@@ -223,6 +223,28 @@ finally{ //Executed this block irrespective of any exception in the try block
 }
 ```
 
+**Example**
+
+```aidl
+public class ExceptionHandledTryCatch {
+
+    public static void main(String[] args) {
+        int a = 10;
+
+        try{
+            System.out.println(a/0);  // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+
+        }catch (ArithmeticException e){
+           e.printStackTrace();
+            System.out.println("Exception is : " + e);
+        }
+
+        System.out.println("Calculation completed");
+    }
+}
+
+```
+
 **syntax 3**
 
 -   This is the best approach for exception handling.
@@ -237,6 +259,30 @@ try{
 finally{ //Executed this block irrespective of any exception in the try block
  
 }
+```
+
+
+**Example**
+
+```aidl
+public class ExceptionTryCatchFinally {
+
+    public static void main(String[] args) {
+
+        int a = 10;
+
+        try{
+            System.out.println(a/0);  // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+
+        }catch (ArithmeticException e){
+            e.printStackTrace();
+            System.out.println("Exception is : " + e);
+        }finally {
+            System.out.println("Calculation completed");
+        }
+    }
+}
+
 ```
 
 ### Exception Hierarchy:
