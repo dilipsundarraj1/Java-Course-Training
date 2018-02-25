@@ -178,7 +178,7 @@ public class ExceptionExample {
 
 -   Exception Handling is a mechanism to handle runtime errors gracefully and proceed with the execution of the program
 
-**syntax**
+**syntax 1**
 
 ```aidl
 
@@ -187,7 +187,7 @@ try{
 }catch(Exception ref){}  //catches the exception
 ```
 
-
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/java-io-exception/images/exceptionobject.JPG)
 
 **Example :**
 
@@ -195,18 +195,47 @@ try{
 public class ExceptionHandledExample {
 
     public static void main(String[] args) {
-        String s = null;
+        int a = 10;
 
         try{
-            System.out.println(s.length()); // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+            System.out.println(a/0);  // exception happens and disrupts the flow of the program and none of the below this does not get executed.
 
-        }catch (NullPointerException e){
+        }catch (ArithmeticException e){
            e.printStackTrace();
             System.out.println("Exception is : " + e);
         }
 
         System.out.println("Calculation completed");
     }
+}
+```
+
+**syntax 2**
+
+
+```aidl
+
+try{  
+//code that may throw exception  
+} 
+finally{ //Executed this block irrespective of any exception in the try block
+ 
+}
+```
+
+**syntax 3**
+
+-   This is the best approach for exception handling.
+
+```aidl
+
+try{  
+//code that may throw exception  
+} catch(Exception e){
+
+}
+finally{ //Executed this block irrespective of any exception in the try block
+ 
 }
 ```
 

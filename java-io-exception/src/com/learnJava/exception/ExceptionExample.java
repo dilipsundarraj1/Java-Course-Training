@@ -4,10 +4,10 @@ public class ExceptionExample {
 
     public static void main(String[] args) {
 
-        String s = null;
+        int a = 10;
 
-        System.out.println(s.length()); // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+        System.out.println(a/0); // exception happens and disrupts the flow of the program and none of the below this does not get executed.
 
-        System.out.println("Length is calculated");
+        System.out.println("Division is calculated");
     }
 }
