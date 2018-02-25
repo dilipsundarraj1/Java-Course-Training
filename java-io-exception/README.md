@@ -1,0 +1,221 @@
+# Java -IO (input/output)
+
+## Scanner Class 
+
+-   This class is used to interact with the user via the input from the keyboard.
+
+### How to create an instance of scanner ?
+
+```aidl
+    Scanner scanner = new Scanner(System.in);
+```
+**Example 1**
+
+```aidl
+public class ScannerExample {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a Number : ");
+        int rollno=scanner.nextInt();  // syntax to get a integer
+        System.out.println("Entered Number is : " + rollno);
+
+        System.out.println("Enter a name : ");
+        String name=scanner.next(); // syntax to get a String
+        System.out.println("Entered name is : " + name);
+
+        System.out.println("Enter the price of the TV : ");
+        double price=scanner.nextDouble(); // syntax to get a double
+        System.out.println("Entered TV price is : " + price);
+
+
+    }
+}
+
+```
+
+
+**Example 2**
+
+-   Using a for loop to get the user input.
+
+```aidl
+public class ScannerIteratorExample {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        List<String> nameList = new ArrayList<>();
+
+        for (int i=0;i<3;i++){
+            System.out.println(" Please Enter a name  : ");
+            nameList.add(scanner.next());
+        }
+
+        System.out.println("Entered names are : " + nameList);
+    }
+}
+
+```
+
+### Calculator Example
+
+
+```aidl
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class CalculatorExample {
+
+    public static void main(String[] args) {
+
+        System.out.println("Lets perform the arithmetic operation of two numbers.");
+        System.out.println("1 : ADD\n2 : Subtract\n3 : Multiply\n4 : Divide");
+
+        System.out.println(" Please enter an option: ");
+
+        Scanner scanner = new Scanner(System.in);
+
+        int selectedOption = scanner.nextInt();
+
+        List<Integer> userInputs = new ArrayList<Integer>();
+
+        for (int i=1;i<=2;i++){
+            System.out.println("Enter number " + i + ":");
+            userInputs.add(scanner.nextInt());
+        }
+
+        int result=0;
+
+        switch (selectedOption) {
+            case 1:
+                System.out.println("Performing Addition");
+                for(Integer i : userInputs){
+                    result+=i;
+                }
+                break;
+            case 2:
+                System.out.println("Performing Subraction");
+                result = userInputs.get(0) -userInputs.get(1);
+                break;
+            case 3:
+                System.out.println("Performing Multiply");
+                    result = userInputs.get(0) *userInputs.get(1);
+                break;
+            case 4:
+                System.out.println("Performing Divide");
+                    result=userInputs.get(0) /userInputs.get(1);;
+                break;
+            case 5:
+                System.out.println("Selected an invalid option");
+                break;
+        }
+
+        System.out.println("The result is : " + result);
+
+
+    }
+}
+
+```
+
+### Stream
+
+-   A stream is a sequence data.
+
+-   Java by default provides us three streams
+
+    -   System.in
+    -   System.out
+    -   System.err
+    
+
+**Example**
+
+```aidl
+public class StreamExample {
+
+    public static void main(String[] args) {
+        System.err.println("hello error");
+        System.out.println("hello world");
+
+
+    }
+}
+```
+
+### Exception:
+
+-   In Java , the Exception is an event that disrupts the normal flow of the program.
+-   Exception happens at runtime.
+
+#### What is runtime ?
+
+-   A runtime is the time which is the execution period of the program.
+
+**Example**
+
+```aidl
+public class ExceptionExample {
+
+    public static void main(String[] args) {
+
+        String s = null;
+
+        System.out.println(s.length()); // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+
+        System.out.println("Length is calculated");
+    }
+}
+
+```
+
+#### What is exception handling
+
+-   Exception Handling is a mechanism to handle runtime errors gracefully and proceed with the execution of the program
+
+**syntax**
+
+```aidl
+
+try{  
+//code that may throw exception  
+}catch(Exception ref){}  //catches the exception
+```
+
+
+
+**Example :**
+
+```aidl
+public class ExceptionHandledExample {
+
+    public static void main(String[] args) {
+        String s = null;
+
+        try{
+            System.out.println(s.length()); // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+
+        }catch (NullPointerException e){
+           e.printStackTrace();
+            System.out.println("Exception is : " + e);
+        }
+
+        System.out.println("Calculation completed");
+    }
+}
+```
+
+### Exception Hierarchy:
+
+
+
+
+### FileOutputStream
+
+- Java FileOutputStream is an output stream used for writing data to a file.
+

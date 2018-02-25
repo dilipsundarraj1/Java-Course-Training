@@ -1,0 +1,5 @@
+-   Create the calculator program that is going to accept the user input for 3 numbers
+    -   addition
+    -   multiplication
+    -   subtraction
+    -   division
