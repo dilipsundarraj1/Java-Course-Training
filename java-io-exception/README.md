@@ -288,9 +288,153 @@ public class ExceptionTryCatchFinally {
 ### Exception Hierarchy:
 
 
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/java-io-exception/images/exception-hierarchy.png)
+
 
 
 ### FileOutputStream
 
 - Java FileOutputStream is an output stream used for writing data to a file.
+
+```aidl
+public class FileOutputStreamExample {
+
+    public static void main(String[] args)  {
+
+        try{
+
+            FileOutputStream fout=new FileOutputStream("/Dilip/input/testout.txt");
+            String s="Hello World.";
+            byte b[]=s.getBytes();//converting string into byte array
+            fout.write(b);
+            fout.close();
+            System.out.println("success...");
+
+        }catch (FileNotFoundException e){
+            System.out.println("inside exception block " + e);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            System.out.println("inside exception block " + e);
+        }
+
+
+    }
+}
+
+```
+
+### FileInputStream
+
+- Java FileInputStream is an input stream used for read the data to a file.
+
+
+```aidl
+ public static void main(String[] args) {
+        try{
+            FileInputStream fin=new FileInputStream("/Dilip/input/testout.txt");
+            int i=0;
+
+            while((i=fin.read())!=-1){
+                System.out.print((char)i);
+            }
+            fin.close();
+
+            fin.close();
+        }catch(Exception e){System.out.println(e);}
+    }
+
+```
+
+
+### BufferedWriter
+
+-   This is the best approach to write the file.
+
+```aidl
+
+public class BufferedWriterExample {
+    private static final String FILENAME = "/Dilip/input/testout.txt";
+
+    public static void main(String[] args) {
+
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+
+        try {
+
+            String content = "This is the content to write into file\n";
+
+            fw = new FileWriter(FILENAME);
+            bw = new BufferedWriter(fw);
+            bw.write(content);
+
+            System.out.println("Done");
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+
+        } finally {
+
+            try {
+
+                if (bw != null)
+                    bw.close();
+
+                if (fw != null)
+                    fw.close();
+
+            } catch (IOException ex) {
+
+                ex.printStackTrace();
+
+            }
+
+        }
+
+    }
+}
+
+```
+
+### BufferedReader
+
+-   This is the best approach to read the file.
+
+```aidl
+public class BufferedReaderExample {
+
+    public static void main(String[] args) throws IOException {
+
+        FileReader fr= null;
+        BufferedReader br=null;
+        try {
+            fr = new FileReader("/Dilip/input/testout.txt");
+            br=new BufferedReader(fr);
+            String sCurrentLine;
+
+            while ((sCurrentLine = br.readLine()) != null) {
+                System.out.println(sCurrentLine);
+            }
+
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+
+            if (br != null)
+                br.close();
+
+            if (fr != null)
+                fr.close();
+
+        }
+        }
+}
+
+```
+
 
