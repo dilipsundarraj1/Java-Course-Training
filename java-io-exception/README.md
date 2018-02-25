@@ -174,6 +174,29 @@ public class ExceptionExample {
 
 ```
 
+**Example 2 - Arithmetic Exception**
+
+```aidl
+public class ExceptionExample {
+
+
+    public static void performDivision(int i){
+    int b=0;
+        System.out.println(i/b); // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+
+
+    }
+    public static void main(String[] args) {
+        int a = 10;
+        performDivision(a);
+        System.out.println("Division is calculated");
+    }
+
+
+}
+
+```
+
 #### What is exception handling
 
 -   Exception Handling is a mechanism to handle runtime errors gracefully and proceed with the execution of the program
@@ -207,6 +230,34 @@ public class ExceptionHandledExample {
 
         System.out.println("Calculation completed");
     }
+}
+```
+
+**Example 2**
+
+```
+public class ExceptionExample {
+
+
+    public static void performDivision(int i){
+    int b=0;
+        System.out.println(i/b); // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+
+    }
+    public static void main(String[] args) {
+        int a = 10;
+        try{
+            performDivision(a);  // exception happens and disrupts the flow of the program and none of the below this does not get executed.
+
+        }catch (ArithmeticException e){
+           // e.printStackTrace();
+            System.out.println("Exception is : " + e);
+        }
+
+        System.out.println("Division is calculated");
+    }
+
+
 }
 ```
 
