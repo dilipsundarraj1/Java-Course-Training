@@ -45,7 +45,7 @@ public class CalculatorExample {
                 System.out.println("Performing Divide");
                     result=userInputs.get(0) /userInputs.get(1);;
                 break;
-            case 5:
+            default:
                 System.out.println("Selected an invalid option");
                 break;
         }
