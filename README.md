@@ -120,4 +120,20 @@
 - Link:
   - https://github.com/dsaish3/Java-Course-Training/tree/master/control-flow-statements
   - Test
-    - https://github.com/dsaish3/Java-Course-Training/blob/master/control-flow-statements/test/test-1.md
+    - https://github.com/dsaish3/Java-Course-Training/blob/master/control-flow-statements/test/
+
+### java-io-exception
+
+- Scanner Class
+- Exploring Scanner Class
+- Calculator program for two numbers
+- Exception
+- Exception Handling
+- FileOutputStream
+- FileInputStream
+- BufferedWriter
+- BufferedReader
+- Link:
+  - https://github.com/dsaish3/Java-Course-Training/tree/master/java-io-exception
+- Test
+    - https://github.com/dsaish3/Java-Course-Training/tree/master/java-io-exception/test
