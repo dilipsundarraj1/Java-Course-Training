@@ -341,11 +341,164 @@ public class ExceptionTryCatchFinally {
 
 ![](https://github.com/dsaish3/Java-Course-Training/blob/master/java-io-exception/images/exception-hierarchy.png)
 
+### File:
 
+-   **File**  class in Java is used to represent a file.
+
+
+#### How to create a file ?
+
+-   **createNewFile** method to create a new file.
+
+public class FileExample {
+
+    public static void main(String[] args) {
+
+
+        File file = new File("/Dilip/input/myfile.txt");
+
+        try {
+            if(file.createNewFile()) // this creates brand new file in your machine.
+                System.out.println("Success!");
+
+  
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+}
+
+#### How to write a file to a specific location ?
+
+-  We will use a **FileWriter** class to write a file to a specific location.
+
+**Example**
+
+```aidl
+public class FileExample {
+
+    public static void main(String[] args) {
+
+
+        File file = new File("/Dilip/input/myfile.txt");
+
+        try {
+            if(file.createNewFile()) // this creates brand new file in your machine.
+                System.out.println("Success!");
+
+            String input="Test data";
+
+            /**
+             * Code to write a file
+             */
+            FileWriter writer = new FileWriter(file);
+            writer.write(input);
+            writer.close();
+
+            System.out.println("Data Successfully written to the file!");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+}
+```
+
+#### How to read a file from a specific location ?
+
+-  We will use a **FileReader** class to read a file from a specific location.
+
+
+```aidl
+
+package com.learnJava.file;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileExample {
+
+    public static void main(String[] args) {
+
+
+        File file = new File("/Dilip/input/myfile.txt");
+
+        try {
+            if(file.createNewFile()) // this creates brand new file in your machine.
+                System.out.println("Success!");
+
+            String input="Test data";
+
+            /**
+             * Code to write a file
+             */
+            FileWriter writer = new FileWriter(file); //gets the access to the file
+            writer.write(input);
+            writer.close();
+
+            System.out.println("Data Successfully written to the file!");
+
+            FileReader fileReader = new FileReader(file); // //gets the access to the file
+            char [] a = new char[input.length()];
+            fileReader.read(a);   // reads the content to the file and assigns it to the array
+            for(char c : a)
+                System.out.print(c);   // prints the characters one by one
+            fileReader.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+}
+
+```
+
+#### How to check a file exists ?
+
+-   We can use the **exists** method to do that.
+
+```aidl
+            System.out.println("File Exists : " + file.exists());
+
+```
+
+#### How to rename a file name ?
+
+-   Use the **rename** method in order to rename a file from one to another.
+
+
+```aidl
+File file = new File("/Dilip/input/myfile.txt"); //old file
+File newfile = new File("/Dilip/input/myfile-new.txt"); // new file
+
+            file.renameTo(newfile);
+```
+
+#### How to delete a file name ?
+
+-   We can use the **delete** method to delete a file.
+-   This returns a boolen as **true** if the deletion is successful.
+
+
+```aidl
+File newfile = new File("/Dilip/input/myfile-new.txt");
+
+            if(newfile.delete()) { // returns a boolean
+                System.out.println("Successfully delete the file");
+
+            }
+```
 
 ### FileOutputStream
 
-- Java FileOutputStream is an output stream used for writing data to a file.
+-   Java FileOutputStream is an output stream used for writing data to a file.
+-   This is another approach of writing a file.
 
 ```aidl
 public class FileOutputStreamExample {
@@ -377,7 +530,8 @@ public class FileOutputStreamExample {
 
 ### FileInputStream
 
-- Java FileInputStream is an input stream used for read the data to a file.
+-   Java FileInputStream is an input stream used for read the data to a file.
+-   This is another approach of reading a file.
 
 
 ```aidl
