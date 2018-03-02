@@ -8,7 +8,7 @@
 -   Inheritance
 -   Polymorphism
 -   Encapsulation - We discussed about this already.
--   Aggregation
+-   Abstraction
 -   Association
 
 
@@ -370,8 +370,10 @@ public class VehicleClient {
 
 -   The interface in java is a mechanism to achieve abstraction. 
 -   There can be only abstract methods decalrations in the java interface not method body. 
+    -   This means the interface tells you what to do but doesnt tell you how to do.
 -   It is used to achieve abstraction and polymorphism Java.
 -   All the methods in interface is **abstract** by default.
+
 
 #### Dont's:
 
@@ -444,7 +446,7 @@ public class Accord implements  Car{
 -   The car instance which speed method it needs to call during run time. 
 -   This is called run time polymorphism.
 -   The method invocation is resolved at run time.
--   Dont confuse this one with overriding.
+-   Don't confuse this one with overriding.
 
 ```aidl
 package com.learnJava.polymorphism;
@@ -502,3 +504,359 @@ public class Camry implements Car {
         car.speed(200);
         car = new Accord(); // Accord is a Car
 ```
+
+### Abstraction
+
+-   Abstraction can also be achieved by using abstract clases.
+-   We will use the **abstract** keyword for that.
+-   It is allowed to have constructor, variables and method body.
+-   The implementation classes will use the extends keyword in the case of abstract classes.
+    
+**Employee**
+
+```aidl
+package com.learnJava.abstractt;
+
+public abstract class Employee {
+
+    private String name;
+    private  static final int HOURS = 2080;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int calculateSalaty(int hourlyPay){
+        return 2080 * hourlyPay;
+    }
+}
+
+```
+**SoftWareEngineer**
+
+```aidl
+package com.learnJava.abstractt;
+
+public class SoftWareEngineer extends  Employee {
+
+    public SoftWareEngineer(String name) {
+        super(name);
+    }
+
+    @Override
+    public String hello(){
+        return "SoftWare Engineer Hello";
+    }
+
+
+}
+
+```
+
+**Manager**
+
+```aidl
+package com.learnJava.abstractt;
+
+public class Manager extends  Employee{
+
+    public Manager(String name) {
+        super(name);
+    }
+
+```
+**SoftwareEngineerDemo**
+```aidl
+package com.learnJava.abstractt;
+
+public class SoftwareEngineerDemo {
+    public static void main(String[] args) {
+
+        SoftWareEngineer softWareEngineer = new SoftWareEngineer("ABC");
+        System.out.println(softWareEngineer.getName());
+
+        System.out.println(softWareEngineer.calculateSalaty(50));
+
+        Manager manager = new Manager("XYZ");
+
+        System.out.println(softWareEngineer.calculateSalaty(65));
+    }
+}
+
+
+```
+
+### Abstraction vs Interfaces:
+
+-   Use abstraction when you have common logic that will be used by all the classes.
+
+-  The below link has good comparision.
+https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-java/
+
+### Association/Aggregation/Composition
+
+#### Association
+
+-   Association is relation between two separate classes which establishes through their Objects
+
+-   Aggregation and Composition are the two forms of association.
+
+### Aggregation:
+
+-   It is a unidirectional association.
+-   It represents Has-A relationship.
+
+
+
+**Student:**
+
+```aidl
+package com.learnJava.aggregation;
+
+public class Student {
+
+    private String name;
+    private String grade;
+    private Address schoolAddress;
+    private Address homeAddress;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public Address getSchoolAddress() {
+        return schoolAddress;
+    }
+
+    public void setSchoolAddress(Address schoolAddress) {
+        this.schoolAddress = schoolAddress;
+    }
+
+    public Address getHomeAddress() {
+        return homeAddress;
+    }
+
+    public void setHomeAddress(Address homeAddress) {
+        this.homeAddress = homeAddress;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", grade='" + grade + '\'' +
+                ", schoolAddress=" + schoolAddress +
+                ", homeAddress=" + homeAddress +
+                '}';
+    }
+}
+```
+
+**Address**
+
+```aidl
+package com.learnJava.aggregation;
+
+public class Address {
+
+    private String addressline;
+    private String city;
+    private String state;
+    private String zip;
+
+    public Address(String addressline, String city, String state, String zip) {
+        this.addressline = addressline;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+
+    public String getAddressline() {
+        return addressline;
+    }
+
+    public void setAddressline(String addressline) {
+        this.addressline = addressline;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "addressline='" + addressline + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
+    }
+}
+
+```
+-   In aggregation both objects can live independently.
+
+### Compoition
+
+-   This is a restricted form of Association where two objects are highly dependent on each other.
+
+**Book**
+
+```aidl
+package com.learnJava.composition;
+
+public class Book {
+
+    public String title;
+    public String author;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                '}';
+    }
+}
+
+```
+
+**Library**
+
+```aidl
+package com.learnJava.composition;
+
+import java.util.List;
+
+public class Library {
+
+    // reference to refer to list of books.
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private  List<Book> books;
+
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "name='" + name + '\'' +
+                ", books=" + books +
+                '}';
+    }
+}
+
+```
+
+**CompositionDemo**
+
+```aidl
+package com.learnJava.composition;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CompositionDemo {
+
+    public static void main(String[] args) {
+
+        Book book = new Book();
+        book.setAuthor("ABC");
+        book.setTitle("Learn Java");
+
+
+        Library library = new Library();
+        library.setName("ABC");
+
+        List<Book> books = new ArrayList<>();
+        books.add(book);
+
+
+        library.setBooks(books);
+
+        System.out.println("Book is : " + book);
+
+        System.out.println("Library is : " + library);
+
+    }
+}
+
+```
+
+-   In the above example , we have the Libaray which is going to have all the books.
+
+-   If the Library is destroyed then the books wont have any value. It cannot stay on its own.
+ 
