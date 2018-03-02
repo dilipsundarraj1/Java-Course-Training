@@ -141,16 +141,12 @@
 
 ### java-io-exception
 
-    - Scanner Class
-    - Exploring Scanner Class
-    - Calculator program for two numbers
-    - Exception
-    - Exception Handling
-    - FileOutputStream
-    - FileInputStream
-    - BufferedWriter
-    - BufferedReader
-    - Link:
-      - https://github.com/dsaish3/Java-Course-Training/tree/master/java-io-exception
-    - Test
-        - https://github.com/dsaish3/Java-Course-Training/tree/master/java-io-exception/test
+- OOPS Concepts
+- Inheritance
+- Polymorphism
+- Abstraction
+- Association/Aggregation/Composition
+- Link:
+  - https://github.com/dsaish3/Java-Course-Training/tree/master/java-io-exception
+- Test
+  - https://github.com/dsaish3/Java-Course-Training/tree/master/java-io-exception/test
