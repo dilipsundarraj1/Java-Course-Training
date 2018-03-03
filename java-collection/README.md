@@ -7,16 +7,18 @@ The most common ones are below.
 -   HashMap
 -   Set
 
-### HashMap
+### Map
 
 -   This is a type of collection which is used to hold the key value pairs of a collection.
 
 -   A HashMap implements the **Map** Interface.
 
+-   **HashMap** implements the Map interface.
+
 **Example**
 
 ```aidl
-package com.learnJava.hashmap;
+package com.learnJava.map;
 
 import java.util.HashMap;
 
@@ -166,6 +168,138 @@ System.out.println("Key of the HashMap : " + names.keySet());
     }
 ```
 
+## Set
+
+-   Set is a type of collection that can used when you do not need the collection to have duplicate values.
+
+-   HashSet is a collection that Implements the Set interface.
+   
+```aidl
+
+        Set<String> set = new HashSet<String>();
+
+        set.add("ABC");
+        set.add("DEF");
+        set.add("GHI");
+        set.add("ABC"); // It checks whether a duplicate is avaialble. If its available then it overrides that values.
+        System.out.println(set);
+
+```
+
+### Exploring Set Methods
+
+**add**
+
+-   This method is used to add the element in to the set.
+
+```aidl
+
+    public static void main(String[] args) {
+
+        Set<String> set = new HashSet<String>();
+
+        set.add("ABC");
+        set.add("DEF");
+        set.add("GHI");
+        set.add("ABC");
+
+        System.out.println(set);
+
+```
+
+**Contains**
+
+-   This method is return a boolean if the set has the element.
+
+```aidl
+        Set<String> set = new HashSet<String>();
+
+        set.add("ABC");
+        set.add("DEF");
+        set.add("GHI");
+        set.add("ABC");
+
+        System.out.println(set);
+
+        set.contains("ABC"); // returns true if the element is available in the set otherwise false.
+```
+
+**remove**
+
+-   This method is used to remove an element from the set.
+
+```aidl
+    set.remove("ABC");
+
+    System.out.println(set);
+```
 
 
+**addAll**
+
+-   This method is used to add a set to the existing set.
+
+
+```aidl
+
+ Set<String> set = new HashSet<String>();
+
+        set.add("ABC");
+        set.add("DEF");
+        set.add("GHI");
+
+Set<String> set1 = new HashSet<String>();
+        set1.add("JKL");
+        set1.add("MNO");
+
+        set.addAll(set1); // this  add all the elements of  set1 to the set.
+
+        System.out.println(set);
+```
+
+**isEmpty**
+
+-   This method is used to check the set is emptry.
+-   If the set is empty then it will return true otherwise false.
+
+```aidl
+System.out.println(set.isEmpty()); // false because the set is not empty.
+```
+
+
+**clear**
+
+-   This method is used to clear the elements from the set.
+
+```aidl
+set.clear();
+```
+
+### How to iterate a Set ?
+
+**Approach 1**
+```aidl
+  public static void iterateSet(Set<String> set){
+
+        for(String s : set){
+            System.out.println(s);
+        }
+
+    }
+
+```
+
+**Approach 2**
+
+```aidl
+ public static void iterateSet_2(Set<String> set){
+
+        Iterator<String> iterator = set.iterator();
+
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
+    }
+```
 
