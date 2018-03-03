@@ -139,7 +139,7 @@
     - https://github.com/dsaish3/Java-Course-Training/tree/master/java-io-exception/test
 
 
-### java-io-exception
+### java-oops
 
 - OOPS Concepts
 - Inheritance
@@ -148,4 +148,3 @@
 - Association/Aggregation/Composition
 - Link:
   - https://github.com/dsaish3/Java-Course-Training/tree/master/java-oops
-  
