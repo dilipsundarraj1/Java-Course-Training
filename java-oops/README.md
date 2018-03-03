@@ -89,7 +89,12 @@ public class Vehicle {
         this.owner = owner;
     }
 
+    public void drive(){
+        System.out.println("Inside the vehicle drive method");
+    }
+
 }
+
 
 ```
 
