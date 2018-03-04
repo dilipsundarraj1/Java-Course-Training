@@ -92,9 +92,13 @@ gradle dependencies --configuration testCompile
 
 ### Gradle Tasks:
 
--   Gradle is loaded with some predefined tasks such as
+![](https://github.com/dsaish3/Java-Course-Training/blob/master/first-gradle-project/images/gradle-tasks.png)
+
+-   The commonly used gradle tasks:
     -   build
     -   test
+
+
     
 #### How to build the gradle project ?
 
