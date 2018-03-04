@@ -32,6 +32,17 @@ public class HashMapExample {
         names.put(102,"Amy");
 
         System.out.println(names);
+        
+         Map<Integer,Student> studentMap = new HashMap<>();
+        
+                Student student1 = new Student("ABC", "2", "male");
+                Student student2 = new Student("DEF", "2", "female");
+        
+                studentMap.put(100, student1);
+                studentMap.put(101, student2);
+        
+                System.out.println("Students are : " + studentMap);
+
 
         
     }
