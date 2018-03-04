@@ -16,8 +16,8 @@ task fatJar(type: Jar) {
                 'Main-Class': 'com.learnjava.Application'
     }
     baseName = project.name
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-    with jar
+   /* from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar*/
 }
 
 

@@ -1,7 +1,7 @@
 # Gradle
 
 -   Gradle is a build tool.
--   Gradle is going to build our project and produce an artifact.
+-   Gradle is going to build our project and produce an artifact. ie., the jar file in our class
 
 ## What is an Artifact ?
 
@@ -44,6 +44,14 @@ dependencies {
 
 ```
 
+**settings.gradle**
+
+-   This file holds the name of the project.   
+
+```aidl
+rootProject.name = 'first-gradle-project'
+```
+
 **repositories**
 
 **mavenCentral**
@@ -73,10 +81,14 @@ dependencies {
             -   This is an important file and it has information about the jar file.
      
 
-
 **hamcrest-core**
 -   This got added to the project.
 -   There is a concept called **transitive** dependencies.
+
+```
+gradle dependencies --configuration testCompile
+```
+-   Lets discuss more about this when we build the junit.   
 
 ### Gradle Tasks:
 
@@ -94,9 +106,14 @@ gradle build
 
 -   Check the **build/libs** directory.
     -   This has the jar file artifact for the project.
-    
+
+
+### How to add a Task to the Gradle project ?
+
+```aidl
 
 ```
-gradle dependencies --configuration testCompile
-```
+    
+
+
 
