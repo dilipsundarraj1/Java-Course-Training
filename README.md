@@ -148,3 +148,18 @@
 - Association/Aggregation/Composition
 - Link:
   - https://github.com/dsaish3/Java-Course-Training/tree/master/java-oops
+
+### java-collection
+
+- ArrayList
+- Map
+- Set
+- Link
+  - https://github.com/dsaish3/Java-Course-Training/tree/master/java-collection
+
+### First-Gradle-Project
+
+- What is Gradle ?
+- 
+- Video link:
+  - Gradle Project in IntelliJ - https://youtu.be/GYFsb86MxVw
