@@ -111,7 +111,7 @@ testCompile - Dependencies for source set 'test'.
     -   build
     -   test
 
-#### How to build the gradle project ?
+### How to build the gradle project ?
 
 -   The goal of using gradle is that we need to build the artifact for the project
 
