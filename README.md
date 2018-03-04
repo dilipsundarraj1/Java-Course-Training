@@ -162,5 +162,7 @@
 
 - What is Gradle ?
 - Build a Gradle project
+- Link
+  - https://github.com/dsaish3/Java-Course-Training/tree/master/first-gradle-project
 - Video link:
   - Gradle Project in IntelliJ - https://youtu.be/GYFsb86MxVw
