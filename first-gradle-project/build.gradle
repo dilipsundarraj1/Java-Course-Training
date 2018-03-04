@@ -9,15 +9,15 @@ repositories {
     mavenCentral()
 }
 
-task fatJar(type: Jar) {
+jar {
     manifest {
-        attributes 'Implementation-Title': 'First Gradle File Example',
-                'Implementation-Version': version,
-                'Main-Class': 'com.learnjava.Application'
+        attributes(
+                    "Implementation-Title": project.name,
+                    "Implementation-Version": version,
+                    "Main-Class": 'com.learnjava.HelloWorld',
+                    "Created-By" : 'Dilip'
+                )
     }
-    baseName = project.name
-   /* from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-    with jar*/
 }
 
 

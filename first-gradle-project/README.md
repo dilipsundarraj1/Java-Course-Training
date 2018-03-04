@@ -52,14 +52,14 @@ dependencies {
 rootProject.name = 'first-gradle-project'
 ```
 
-**repositories**
+#### repositories
 
-**mavenCentral**
+#### mavenCentral
      
 -   https://mvnrepository.com/
 -   This is the link where all the open source projects are build and stored.
 
-**dependencies**
+#### dependencies
 
 -   Lets take a look at the below example.
 -   The below junit-4.12.jar gets added to the gradle project by default.
@@ -85,10 +85,23 @@ dependencies {
 -   This got added to the project.
 -   There is a concept called **transitive** dependencies.
 
+### How to find the transitive dependencies ?
+
 ```
 gradle dependencies --configuration testCompile
 ```
--   Lets discuss more about this when we build the junit.   
+
+**Result**
+
+```aidl
+
+testCompile - Dependencies for source set 'test'.
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+```
+-   Lets discuss more about this when we build the junit.
+
 
 ### Gradle Tasks:
 
@@ -98,8 +111,6 @@ gradle dependencies --configuration testCompile
     -   build
     -   test
 
-
-    
 #### How to build the gradle project ?
 
 -   The goal of using gradle is that we need to build the artifact for the project
@@ -107,17 +118,91 @@ gradle dependencies --configuration testCompile
 ```aidl
 gradle build
 ```
+**Result:**
+
+```aidl
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar UP-TO-DATE
+:assemble UP-TO-DATE
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:check UP-TO-DATE
+:build UP-TO-DATE
+
+BUILD SUCCESSFUL
+
+Total time: 0.698 secs
+
+```
+
+-   **build** task runs many other tasks behind the scenes.
+
+-   Each line in the task runs a separate task.
+
+```aidl
+:compileJava UP-TO-DATE - > This is a task which performs the compilation of the source code.
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar UP-TO-DATE -> This task generates the jar file of the project with the provided name and version in the gradle file.
+:assemble UP-TO-DATE
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE -> This runs the test cases of the application.
+:check UP-TO-DATE
+:build UP-TO-DATE 
+```
 
 -   Check the **build/libs** directory.
     -   This has the jar file artifact for the project.
+    -   The **jar** task that is part of the build task is responsible for building the artifact.
+
+   
+### MANIFEST.MF
+
+-   This file holds complete information of the artifact.
+
+```aidl
+Manifest-Version: 1.0
+Implementation-Title: first-gradle-project
+Implementation-Version: 1.0-SNAPSHOT
+Main-Class: com.learnjava.HelloWorld
+```
 
 
 ### How to add a Task to the Gradle project ?
 
+-   Here we are overriding the jar task.
+-   This will add the Manifest and build the jar file.
+
 ```aidl
+jar {
+    manifest {
+        attributes(
+                    "Implementation-Title": project.name,
+                    "Implementation-Version": version,
+                    "Main-Class": 'com.learnjava.HelloWorld',
+                    "Created-By" : 'Dilip'
+                )
+    }
+}
+
 
 ```
     
+-   **Main-Class** -> This holds the class with the main method. 
+-   In our example the **HelloWorld** is the class to be added.
+ 
+### How to run the Jar file ?
+ 
+```aidl
+java -jar build/libs/first-gradle-project-1.0-SNAPSHOT.jar 
+```
 
+-   This will execute and run the project.
 
 
