@@ -160,6 +160,6 @@
 ### First-Gradle-Project
 
 - What is Gradle ?
-- 
+- Build a Gradle project
 - Video link:
   - Gradle Project in IntelliJ - https://youtu.be/GYFsb86MxVw
