@@ -14,7 +14,7 @@ jar {
         attributes(
                     "Implementation-Title": project.name,
                     "Implementation-Version": version,
-                    "Main-Class": 'com.learnjava.HelloWorld',
+                    "Main-Class": 'com.learnjava.Calculator',
                     "Created-By" : 'Dilip'
                 )
     }
