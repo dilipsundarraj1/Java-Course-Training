@@ -412,3 +412,9 @@ public class Calculator {
     }
 }
 ```
+
+### Junit
+
+-   Junit is the library which is used to write test cases for our code.
+
+-   In this example we will look at how to write junit test cases for Calculator example.
