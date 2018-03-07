@@ -1,10 +1,17 @@
 package com.learnjava;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Calculator {
+
+    private static final Logger logger =
+            LoggerFactory.getLogger(Calculator.class);
+
 
     public int performAddition(List<Integer> input){
 
@@ -21,7 +28,8 @@ public class Calculator {
         List<Integer> userInputs = new ArrayList<Integer>();
 
         for (int i=1;i<=2;i++){
-            System.out.println("Enter number " + i + ":");
+            //System.out.println("Enter number " + i + ":");
+            logger.info("Enter number " + i + ":");
             userInputs.add(scanner.nextInt());
         }
         return userInputs;
@@ -63,7 +71,7 @@ public class Calculator {
                     break;
 
             }
-            System.out.println("Result is : " + result);
+            logger.info("Result is : " + result);
 
             }
 

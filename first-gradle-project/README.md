@@ -206,3 +206,116 @@ java -jar build/libs/first-gradle-project-1.0-SNAPSHOT.jar
 -   This will execute and run the project.
 
 
+## Enable Logging in Java application
+
+-   There are many external libraries that are available today to log the application logs in a separate file.
+-   Popular ones are below:
+    -   log4j
+    -   slf4j and logback.
+-   We will focus on **slf4j and logback** as this is the latest which is widely used today.
+-   More information about logback is available in the below link.
+    -   https://logback.qos.ch/manual/introduction.html
+
+## slf4j and logback
+
+### Add the dependecies in the build.gradle.
+
+```aidl
+dependencies {
+    compile 'org.slf4j:jcl-over-slf4j:1.7.12'
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+```
+
+-   This above will download the **jcl-over-slf4j** depedency and **logback** to the class path.
+ 
+ ### Add the logback.xml to the resources directory
+ 
+```aidl
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="LOG_PATH" value="logs"/>
+
+    <!--Console Appender-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"> 
+        <encoder>
+            <pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} %green([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!--Rolling File Appender-->
+    <appender name="File-Logger" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <file>${LOG_PATH}/calculator.log</file>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n
+            </Pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>
+                ${LOG_PATH}/archived/log_%d{dd-MM-yyyy}.log
+            </fileNamePattern>
+            <maxHistory>10</maxHistory>
+            <totalSizeCap>100MB</totalSizeCap>
+        </rollingPolicy>
+
+    </appender>
+
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="File-Logger"/>
+    </root>
+
+</configuration>
+```
+        
+-   The above configuration has **ConsoleAppender** and **RollingFileAppender** 
+    -   It is going to write the application log in the console and the file.
+    
+-   More information about appenders are available in the below link:
+    
+    -   https://logback.qos.ch/manual/appenders.html
+
+### How to write it in the console an file?
+
+-   Create a logger instance like below
+
+```aidl
+  private static final Logger logger =
+            LoggerFactory.getLogger(LogbackExample.class);
+```
+
+**Example:**
+
+```aidl
+package com.learnjava;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class LogbackExample {
+
+    private static final Logger logger =
+            LoggerFactory.getLogger(LogbackExample.class);
+
+    public static void main(String[] args) {
+
+
+        logger.info("My first info Logger");
+
+        logger.warn("My first warning Logger");
+
+        logger.error("My first error logger");
+    }
+}
+
+```
+
