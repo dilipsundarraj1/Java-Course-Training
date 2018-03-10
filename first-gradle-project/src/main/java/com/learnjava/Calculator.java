@@ -35,11 +35,10 @@ public class Calculator {
         return userInputs;
     }
 
-    public static void main(String[] args) {
+    public void calculate() {
 
         System.out.println("Lets perform the arithmetic operation of two numbers.");
 
-        Calculator calculator = new Calculator();
 
         try{
 
@@ -65,8 +64,8 @@ public class Calculator {
 
                     case 1:
                         logger.info("Performing Addition");
-                        List<Integer> userInputs = calculator.getUserInputs(scanner);
-                        result = calculator.performAddition(userInputs);
+                        List<Integer> userInputs = this.getUserInputs(scanner);
+                        result = this.performAddition(userInputs);
                         break;
                     default :
                         logger.warn("Please enter the correct option.");

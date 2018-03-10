@@ -14,10 +14,13 @@ jar {
         attributes(
                     "Implementation-Title": project.name,
                     "Implementation-Version": version,
-                    "Main-Class": 'com.learnjava.Calculator',
+                    "Main-Class": 'com.learnjava.HelloWorld',
                     "Created-By" : 'Dilip'
                 )
     }
+    from {
+            configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        }
 }
 
 
